@@ -1,12 +1,7 @@
-GIT
-  remote: https://github.com/Adrian658/CWRU_view_tool
-  revision: 7b16ea56c6880d08abe6e6588bd6365b50e4c1da
-  specs:
-    CWRU_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
+    CWRU_view_tool (0.1.0)
     actioncable (5.1.4)
       actionpack (= 5.1.4)
       nio4r (~> 2.0)
@@ -192,7 +187,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  CWRU_view_tool!
+  CWRU_view_tool (~> 0.1.0)
   bootstrap (~> 4.0.0)
   byebug
   coffee-rails (~> 4.2)
