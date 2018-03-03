@@ -19,13 +19,9 @@
 
       <%= render "shared/application_nav" %>
 
-      <hr>
-
-      <%= login_helper %>
-
       <%= yield %>
 
-      <%= copyright_generator %>
+      <%= render "shared/application_footer" %>
 
       <%= source_helper("application") %>
 
