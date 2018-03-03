@@ -25,7 +25,6 @@ a:hover {
 /*
  * Base structure
  */
-
 html,
 body {
   height: 100%;
@@ -109,4 +108,22 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+//Custom styles
+.starter-template {
+  padding-top: 6rem;
+}
+
+.card-body {
+  color: black;
+  text-align: left;
+}
+
+.auth-links a {
+  color: black;
+}
+
+.auth-links {
+  margin-top: 15px;
 }
