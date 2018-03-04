@@ -9,6 +9,7 @@
 
     <meta name="keywords" content="<%= @seo_keywords %>">
 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -80,21 +81,18 @@
           </div>
         </aside>
         <!-- End of sidebar -->
-
-        <footer class="blog-footer">
-          <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
-        </footer>
-
-        <%= render "shared/nav", location: "bottom" %>
-
-        <%= source_helper("blog") %>
-
       </div>
+
+      <footer class="blog-footer">
+        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
+
+      <%= source_helper("blog") %>
+
     </main>
-    <!-- Start of container and row elements -->
 
   </body>
 </html>
