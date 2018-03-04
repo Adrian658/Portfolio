@@ -10,10 +10,11 @@
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 2.25rem;
+
 }
 
-.blog-header-logo:hover {
-  text-decoration: none;
+.pb-3, .py-3 {
+  padding-bottom: 0rem !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,6 +35,11 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
   height: 2.75rem;
   overflow-y: hidden;
+  text-align: right;
+}
+
+.btn-outline-secondary {
+  margin-right: 1rem;
 }
 
 .nav-scroller .nav {
