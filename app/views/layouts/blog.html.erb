@@ -9,6 +9,7 @@
 
     <meta name="keywords" content="<%= @seo_keywords %>">
 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -18,19 +19,14 @@
 
     <div class="container">
 
-      <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-12 text-center">
-            <%= link_to "Keeping Up With Tech", blogs_path, class: "blog-header-logo text-dark" %>
-          </div>
-        </div>
-      </header>
+      <%= render 'blog_masthead' %>
 
       <%= render 'shared/blog_nav' %>
 
     </div>
 
     <main role="main" class="container">
+
       <div class="row">
 
         <%= yield %>
@@ -39,12 +35,7 @@
 
       </div>
 
-      <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        <p>
-          <a href="#">Back to top</a>
-        </p>
-      </footer>
+      <%= render 'blog_footer' %>
 
       <%= source_helper("blog") %>
 

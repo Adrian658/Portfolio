@@ -1,12 +1,14 @@
 <div class="col-md-8 blog-main">
 
-  <h3 class="pb-3 mb-4 font-italic border-bottom">
-    <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
-  </h3>
+  <% if logged_in?(:site_admin) %>
+    <h3 class="pb-3 mb-4 font-italic border-bottom new-blog">
+      <%= link_to 'Draft a New Blog', new_blog_path, class: "btn btn-secondary" %>
+    </h3>
+  <% end %>
 
   <h2><%= @blog.title %></h2>
   <p><%= @blog.body %></p>
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> /
-  <%= link_to 'Back', blogs_path %>
+  <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-secondary", id: "back-button" if logged_in?(:site_admin) %>
+  <%= link_to 'Back', blogs_path, class: "btn btn-secondary", id: "back-button" %>
 
 </div>

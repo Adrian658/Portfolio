@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    CWRUViewTool::Renderer.copyright 'Adrian Guzman', 'All rights reserved'
+    CWRUViewTool::Renderer.copyright 'Adrian Guzman', 'Dunder Mifflin Paper Company, Inc'
   end
 end
