@@ -140,12 +140,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-.social-links li a {
+.social-links a {
   font-size: 2.5em;
   color: #B3B2AD;
+  padding-right: 15px;
 }
 
-.social-links li a:hover {
+.social-links a:hover {
   color: #343a40;
 }
 
