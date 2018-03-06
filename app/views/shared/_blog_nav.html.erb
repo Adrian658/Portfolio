@@ -1,11 +1,7 @@
 <div class="nav-scroller py-1 mb-2">
   <nav class="nav d-flex"> <!--justify-content-between-->
     <div>
-      <%= link_to "Home", root_path, class: "p-2 text-muted" %>
-      <%= link_to "About", about_me_path, class: "p-2 text-muted" %>
-      <%= link_to "Contact", contact_path, class: "p-2 text-muted" %>
-      <%= link_to "Blog", blogs_path, class: "p-2 text-muted" %>
-      <%= link_to "Portfolios", portfolios_path, class: "p-2 text-muted" %>
+      <%= nav_helper 'p-2 text-muted', 'span' %>
     </div>
     <div class="ml-auto">
       <%= login_helper "btn btn-sm btn-outline-secondary" %>
