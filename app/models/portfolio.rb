@@ -1,7 +1,7 @@
 class Portfolio < ApplicationRecord
 
 	has_many :technologies
-	accepts_nested_attributes_for :technologies, 
+	accepts_nested_attributes_for :technologies,
 									reject_if: lambda { |attrs| attrs['name'].blank? }
 
 	include Placeholder
@@ -11,6 +11,10 @@ class Portfolio < ApplicationRecord
 	#Custom scopes that are called by the controller
 	def self.java
 		where(subtitle: 'Java')
+	end
+
+	def self.by_position
+		order("position ASC")
 	end
 
 	after_initialize :set_defaults

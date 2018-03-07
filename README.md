@@ -5,6 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
+```Java
+public class ILikeJava() {
+  
+}
+```
+
 * Ruby version
 
 * System dependencies
