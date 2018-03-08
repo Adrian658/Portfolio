@@ -20,3 +20,5 @@
 
 # Don't show secrets
 /config/secrets.yml
+
+.env

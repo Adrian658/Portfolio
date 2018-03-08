@@ -6,10 +6,20 @@
       <%= form.label :title %>
       <%= form.text_field :title, id: :title, class: 'form-control' %>
     </div>
-
     <div class="form-group">
       <%= form.label :subtitle %>
       <%= form.text_field :subtitle, id: :subtitle, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <label class="btn btn-secondary">
+        Upload main image <%= form.file_field :main_image, style: 'display:none;' %>
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="btn btn-secondary">
+        Upload thumb image <%= form.file_field :thumb_image, style: 'display:none;' %>
+      </label>
     </div>
   </div>
   <div class="col-md-6">
@@ -35,7 +45,7 @@
   </div>
 
   <div class="form-group">
-    <%= form.submit 'Save Portfolio Item', class: 'btn btn-primary btn-block' %>
+    <%= form.submit 'Save Portfolio Item', class: 'btn btn-secondary btn-block' %>
   </div>
 </div>
 

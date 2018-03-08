@@ -28,7 +28,7 @@ a:hover {
 html,
 body {
 
-  background-color: #333;
+  //background-color: #333;
 
 }
 
@@ -41,7 +41,7 @@ body {
   justify-content: center;
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  //box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 
   min-height: 100%;
   height: auto;
@@ -90,6 +90,7 @@ body {
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
+    margin-top: 4px;
   }
   .nav-masthead {
     float: right;
@@ -103,9 +104,11 @@ body {
  .cover-contact {
    padding-top: 8%;
  }
-.cover {
-  padding-top: 20%;
+
+.cover-about {
+  padding-top: 8%;
 }
+
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: 700;
@@ -116,7 +119,10 @@ body {
  * Footer
  */
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  color: white;
+  position: absolute;
+  width: inherit;
+  bottom: 0;
 }
 
 //Custom styles
@@ -146,4 +152,42 @@ body {
 .app-nav > span {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.home-page {
+  padding-top: 10rem;
+}
+
+.bg-light {
+  background-color: transparent;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  margin-right: 1rem;
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: .25rem;
+}
+
+button .fas {
+  //color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#background {
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  //top: 50%;
+  //left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: inherit;
+  z-index: -100;
+  //-webkit-transform: translateX(-50%) translateY(-50%);
+  //transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
 }

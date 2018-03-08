@@ -16,15 +16,35 @@
 
   <body class="text-center">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <%= image_tag "1.jpg", id: 'background', alt: "Profile Image" %>
 
-      <%= render "shared/application_nav" %>
+    <!--<%= video_tag(
+      #'722779149.mp4', #coding
+      '796795087.mp4', #electricity
+      #'HardDrivePhotojpeg.mp4',
+      muted: true,
+      id: 'background',
+      autoplay: true,
+      loop: true,
+      poster: '1.jpg'
+    )
+    %>-->
 
-      <%= yield %>
+    <div class="d-flex h-100 p-3 mx-auto flex-column">
 
-      <%= render "shared/application_footer" %>
 
-      <%= source_helper("application") %>
+
+        <%= render "shared/application_nav" %>
+
+        <div class="cover-container">
+
+          <%= yield %>
+
+          <%= render "shared/application_footer" %>
+
+          <%= source_helper("application") %>
+
+        </div>
 
     </div>
 

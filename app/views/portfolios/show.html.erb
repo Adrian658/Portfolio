@@ -1,21 +1,14 @@
-<div class="container">
+<div class="container portfolio-container">
 	<div class="row">
 		<div class="col-md-12">
 
-			<nav class="navbar navbar-expand-sm navbar-light navbar-show">
-				<span class="portfolio-title"><%= @portfolio_item.title %></span>
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><%= link_to 'View all', portfolios_path, class: 'nav-link' %></li>
-					<li class="nav-item"><span><%= link_to "Edit", edit_portfolio_path(@portfolio_item.id), class: 'nav-link' if logged_in?(:site_admin) %></span></li>
-					<li class="nav-item"><span><%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'nav-link' if logged_in?(:site_admin) %></span></li>
-				</ul>
-    	</nav>
-
 		</div>
 		<div class="col-md-7">
-			<%= image_tag @portfolio_item.main_image %>
+			<%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%' %>
 		</div>
 		<div class="col-md-5">
+
+			<h3><%= @portfolio_item.title %></h3>
 
 			<em><%= @portfolio_item.subtitle %></em>
 
@@ -25,6 +18,10 @@
 			<% @portfolio_item.technologies.each do |technology| %>
 				<p> <%= technology.name %> </p>
 			<% end %>
+
+			<li class="nav-item"><%= link_to 'View all', portfolios_path, class: 'nav-link' %></li>
+			<li class="nav-item"><span><%= link_to "Edit", edit_portfolio_path(@portfolio_item.id), class: 'nav-link' if logged_in?(:site_admin) %></span></li>
+			<li class="nav-item"><span><%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'nav-link' if logged_in?(:site_admin) %></span></li>
 
 
 		</div>
