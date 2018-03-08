@@ -18,9 +18,20 @@
 
     <div class="d-flex h-100 p-3 mx-auto flex-column">
 
-      <div id="background">
+      <%= video_tag(
+        '722779149.mp4', #coding
+        #'796795087.mp4', #electricity
+        #'HardDrivePhotojpeg.mp4',
+        muted: true,
+        id: 'background',
+        controls: false,
+        autoplay: true,
+        loop: true,
+        poster: 'alt3-background.jpg'
+      )
+      %>
 
-      </div>
+
 
         <%= render "shared/application_nav" %>
 

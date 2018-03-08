@@ -177,7 +177,10 @@ button .fas {
 }
 
 #background {
-  background-image: url('/assets/stage.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: black;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -188,6 +191,5 @@ button .fas {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background-repeat: no-repeat;
   background-size: cover;
 }
