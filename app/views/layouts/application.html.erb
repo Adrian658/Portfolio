@@ -18,17 +18,21 @@
 
     <div class="d-flex h-100 p-3 mx-auto flex-column">
 
-      <%= render "shared/application_nav" %>
-
-      <div class="cover-container">
-
-        <%= yield %>
-
-        <%= render "shared/application_footer" %>
-
-        <%= source_helper("application") %>
+      <div id="background">
 
       </div>
+
+        <%= render "shared/application_nav" %>
+
+        <div class="cover-container">
+
+          <%= yield %>
+
+          <%= render "shared/application_footer" %>
+
+          <%= source_helper("application") %>
+
+        </div>
 
     </div>
 
