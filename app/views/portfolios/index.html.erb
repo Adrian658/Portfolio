@@ -2,12 +2,14 @@
 
 <div class="album py-5 bg-light">
   <div class="container">
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
-      Try moving us around!
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+    <% if logged_in?(:site_admin) %>
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        Try moving us around!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
     <div class="row sortable">
 
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
