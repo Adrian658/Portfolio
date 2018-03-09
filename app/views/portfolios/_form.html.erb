@@ -1,5 +1,11 @@
 <%= form_with(model: @portfolio_item, local: true) do |form| %>
 
+<% if @portfolio_item.errors.any? %>
+  <% @portfolio_item.errors.full_messages.each do |error| %>
+    <%= js add_gritter(error, title: "Adrian Guzman's Portfolio", sticky: false, time: 3000) %>
+  <% end %>
+<% end %>
+
 <div class="row">
   <div class="col-md-6">
     <div class="form-group">
