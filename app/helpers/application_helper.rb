@@ -15,7 +15,13 @@ module ApplicationHelper
   def source_helper(layout_name)
     if session[:source]
       greeting = "Thanks for visiting me from #{session[:source]}"
-      content_tag(:p, greeting, class: "source-greeting")
+      alert = "<div class='alert alert-dismissible fade show' role='alert'>
+        #{greeting}
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+          <span aria-hidden='true'>&times;</span>
+        </button>
+      </div>"
+      alert.html_safe
     end
   end
 

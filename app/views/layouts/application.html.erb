@@ -10,45 +10,30 @@
     <meta name="keywords" content="<%= @seo_keywords %>">
 
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="text-center">
+  <body>
 
     <%= image_tag "1.jpg", id: 'background', alt: "Profile Image" %>
 
-    <!--<%= video_tag(
-      #'722779149.mp4', #coding
-      '796795087.mp4', #electricity
-      #'HardDrivePhotojpeg.mp4',
-      muted: true,
-      id: 'background',
-      autoplay: true,
-      loop: true,
-      poster: '1.jpg'
-    )
-    %>-->
-
-    <div class="d-flex h-100 p-3 mx-auto flex-column">
-
-
-
-        <%= render "shared/application_nav" %>
-
-        <div class="cover-container">
-
-          <%= yield %>
-
-          <%= render "shared/application_footer" %>
-
-          <%= alerts %>
-
-          <%= source_helper("application") %>
-
-        </div>
-
+  <div class="row custom-container">
+    <div class="col-md-12">
+      <!-- <% if source_helper("application") %>
+        <%= source_helper('application') %>
+      <% end %> -->
+      <%= render "shared/application_nav" %>
     </div>
+    <div class="col-md-12">
+      <%= yield %>
+    </div>
+    <div class="col-md-12">
+      <%= render "shared/application_footer" %>
+    </div>
+    <%= alerts %>
+  </div>
 
   </body>
 </html>

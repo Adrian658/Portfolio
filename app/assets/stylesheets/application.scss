@@ -29,7 +29,7 @@ a:hover {
  */
 html,
 body {
-
+  overflow-x: hidden;
   //background-color: #333;
 
 }
@@ -51,17 +51,19 @@ body {
   width: 100%;
 }
 
-.cover-container {
-  width: 55em;
-}
-
-
 /*
  * Header
  */
-.masthead {
-  margin-bottom: 2rem;
-}
+ .masthead {
+   margin-top: 1rem;
+   padding-top: 10px;
+   right: 50%;
+   height: 5rem;
+   width: 100%;
+   margin-bottom: 2rem;
+   background-color: rgba(49, 49, 49, 0.2);
+   border-bottom: 1px solid #fff;
+ }
 
 .masthead-brand {
   margin-bottom: 0;
@@ -108,7 +110,7 @@ body {
  }
 
 .cover-about {
-  padding-top: 8%;
+  padding-top: 1%;
 }
 
 .cover .btn-lg {
@@ -122,9 +124,7 @@ body {
  */
 .mastfoot {
   color: white;
-  position: absolute;
   width: inherit;
-  bottom: 0;
 }
 
 //Custom styles
@@ -157,7 +157,7 @@ body {
 }
 
 .home-page {
-  padding-top: 10rem;
+  padding-top: 6rem;
 }
 
 .bg-light {
@@ -192,4 +192,157 @@ button .fas {
   //-webkit-transform: translateX(-50%) translateY(-50%);
   //transform: translateX(-50%) translateY(-50%);
   background-size: cover;
+}
+
+.masthead-items {
+  padding-top: 8px;
+}
+
+.left-nav {
+  margin-top: 6px;
+}
+
+.masthead-brand {
+  margin-top: 10px;
+}
+
+.masthead-items a h3 {
+  font-family: Raleway, Open Sans, Arial, sans-serif;
+}
+
+.bottom-hr {
+  height: 0.3px;
+  width: 100%;
+  background-color: white;
+}
+
+.home-page {
+  text-align: left;
+  margin-left: 3rem;
+  font-family: 'Raleway', sans-serif;
+  height: 26rem;
+}
+
+.cover-heading {
+  font-size: 4rem;
+}
+
+.about-me-btn {
+  margin-top: 20px;
+  background-color: #F56D45;
+}
+
+.about-me-btn:hover {
+  background-color: rgba(245, 109, 69, 0.74);
+}
+
+.custom-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.app-footer {
+  text-align: center;
+}
+
+.source-greeting {
+  text-align: center;
+}
+
+.alert {
+  height: 50px;
+  background-color: #F56D45;
+}
+
+.navbar-nav > li > a:active {
+  border-bottom-color: #F56D45;
+}
+
+.about-me-container {
+  font-family: 'Raleway', sans-serif;
+}
+
+.about-me-hr {
+  background-color: #F56D45;
+  height: 4px;
+}
+
+.about-me-hr-jumbo {
+  background-color: #F56D45;
+  height: 2px;
+  margin-top: 2px;
+}
+
+.jumbotron > p {
+  margin-bottom: 0;
+}
+
+.jumbotron > h2 {
+  padding-bottom: 10px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  padding-top: 10px;
+  margin-left: 3rem;
+}
+
+.profile-pic-bgd {
+  background-color: rgba(49, 49, 49, 0.2);
+  border-left: 4px solid #F56D45;
+  border-right: 2px solid #F56D45;
+}
+
+#CWRU-link {
+  color: #F56D45;
+}
+
+.about-me-statement {
+  background-color: rgba(49, 49, 49, 0.2);
+  border-left: 2px solid #F56D45;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.jumbotron {
+  margin-top: 30px;
+  background-color: rgba(49, 49, 49, 0.6);
+  color: white;
+}
+
+.doc-button {
+  border-color: rgba(49, 49, 49, 0.4);//#F56D45;
+  background-color: #F56D45;//rgba(49, 49, 49, 0.4);
+  margin-top: 60px;
+  margin-left: 40%;
+}
+
+.doc-button:hover {
+  background-color: rgba(245, 109, 69, 0.74);
+}
+
+.skills {
+  margin-top: 40px;
+  background-color: rgba(245, 109, 69, 0.5);
+  height: 200px;
+  text-align: center;
+  color: white;
+}
+
+.hobbies {
+  margin-top: 40px;
+  background-color: rgba(49, 49, 49, 0.6);
+  height: 200px;
+  text-align: center;
+  color: white;
+}
+
+.nav-masthead .nav-link:hover {
+  border-bottom-color: rgba(245, 109, 69, 0.6);
+  //text-shadow: 2px 2px #ff0000;
+}
+
+.nav-masthead .active {
+  border-bottom-color: rgba(245, 109, 69, 1);
 }
