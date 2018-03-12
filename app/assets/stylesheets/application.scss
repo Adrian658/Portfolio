@@ -227,6 +227,11 @@ button .fas {
   font-size: 4rem;
 }
 
+.tech-heading {
+  font-size: 4rem;
+  padding-top: 30px;
+}
+
 .about-me-btn {
   margin-top: 20px;
   background-color: #F56D45;
@@ -345,4 +350,18 @@ button .fas {
 
 .nav-masthead .active {
   border-bottom-color: rgba(245, 109, 69, 1);
+}
+
+.tech-news {
+  color: black;
+  margin: 20px;
+}
+
+.tech-news a {
+  color: #F56D45;
+}
+
+.tech-news {
+  padding: 30px;
+  max-height: 200px;
 }
