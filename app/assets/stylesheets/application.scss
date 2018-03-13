@@ -230,6 +230,7 @@ button .fas {
 .tech-heading {
   font-size: 4rem;
   padding-top: 30px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .about-me-btn {
@@ -293,9 +294,9 @@ button .fas {
 }
 
 .profile-pic-bgd {
-  background-color: rgba(49, 49, 49, 0.2);
-  border-left: 4px solid #F56D45;
-  border-right: 2px solid #F56D45;
+  background-color: rgba(49, 49, 49, 0.4);
+  //border: 1px dashed #F56D45;
+  border-left: 3px solid #F56D45;
 }
 
 #CWRU-link {
@@ -304,7 +305,7 @@ button .fas {
 
 .about-me-statement {
   background-color: rgba(49, 49, 49, 0.2);
-  border-left: 2px solid #F56D45;
+  border-left: 3px solid #F56D45;
   padding: 10px;
   width: 100%;
   height: 100%;
