@@ -7,4 +7,14 @@ class Blog < ApplicationRecord
 
 	#belongs_to
 	has_one :topic
+
+	has_many :comments, dependent: :destroy
+
+	def self.special_blogs
+		all
+	end
+
+	def self.featured_blogs
+		limit(2)
+	end
 end
