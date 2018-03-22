@@ -7,6 +7,20 @@
   <% end %>
 
   <h2><%= @blog.title %></h2>
+
+  <nav class="breadcrumb">
+    <%= link_to 'Home', root_path, class: 'breadcrumb-item' %>
+    <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'breadcrumb-item' %>
+    <%= link_to @blog.title, root_path, class: 'breadcrumb-item active' %>
+
+    <% if logged_in?(:site_admin) %>
+    <span class="ml-auto">
+      <a href="<%= edit_blog_path(@blog) %>"><i class="fas fa-edit"></i></a>
+      <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="<%= @blog %>"><i class="fas fa-trash-alt"></i></a>
+    </span>
+    <% end %>
+  </nav>
+
   <p><%= @blog.topic.title %></p>
   <p><%= markdown(@blog.body) %></p>
 
