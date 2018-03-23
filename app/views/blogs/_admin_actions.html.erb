@@ -1,0 +1,6 @@
+<% if logged_in?(:site_admin) %>
+  <nav class="breadcrumb blogcrumbs">
+    <a href="<%= edit_blog_path(blog) %>"><i class="fas fa-edit"></i></a>
+    <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="<%= blog %>"><i class="fas fa-trash-alt"></i></a>
+  </nav>
+<% end %>

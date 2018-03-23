@@ -198,3 +198,11 @@ a.page-link:hover {
   font-size: .8em;
   font-style: italic;
 }
+
+.blogcrumbs > a {
+  margin-right: 15px;
+}
+
+.blogcrumbs > a:hover {
+  color: black;
+}
