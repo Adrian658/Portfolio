@@ -12,10 +12,10 @@ module ApplicationHelper
     end
   end
 
-  def source_helper(layout_name)
+  def source_helper(styles)
     if session[:source]
-      greeting = "Thanks for visiting me from #{session[:source]}"
-      alert = "<div class='alert alert-dismissible fade show' role='alert'>
+      greeting = "Thanks for visiting me from #{session[:source]}!"
+      alert = "<div class='#{styles}' role='alert'>
         #{greeting}
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
           <span aria-hidden='true'>&times;</span>
