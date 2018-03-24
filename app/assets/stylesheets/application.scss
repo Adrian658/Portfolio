@@ -290,13 +290,15 @@ button .fas {
 .profile-pic {
   border-radius: 50%;
   padding-top: 10px;
-  margin-left: 3rem;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .profile-pic-bgd {
   background-color: rgba(49, 49, 49, 0.4);
-  //border: 1px dashed #F56D45;
-  border-left: 3px solid #F56D45;
+  border-left: 3px solid rgba(245, 109, 69, 0.6);
+  border-top: 3px solid rgba(245, 109, 69, 0.6);
 }
 
 #CWRU-link {
@@ -305,7 +307,8 @@ button .fas {
 
 .about-me-statement {
   background-color: rgba(49, 49, 49, 0.2);
-  border-left: 3px solid #F56D45;
+  border-left: 3px solid rgba(245, 109, 69, 0.6);
+  border-top: 3px solid rgba(245, 109, 69, 0.6);
   padding: 10px;
   width: 100%;
   height: 100%;
@@ -320,8 +323,10 @@ button .fas {
 .doc-button {
   border-color: rgba(49, 49, 49, 0.4);//#F56D45;
   background-color: #F56D45;//rgba(49, 49, 49, 0.4);
-  margin-top: 60px;
-  margin-left: 40%;
+}
+
+.doc-button-left {
+  margin-right: 45px;
 }
 
 .doc-button:hover {
@@ -331,9 +336,13 @@ button .fas {
 .skills {
   margin-top: 40px;
   background-color: rgba(245, 109, 69, 0.5);
-  height: 200px;
   text-align: center;
   color: white;
+}
+
+.skill {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .hobbies {
@@ -367,4 +376,12 @@ button .fas {
   max-height: 200px;
   background-color: rgba(49, 49, 49, 0.4);
   color: white;
+}
+
+.bg-custom {
+  background-color: #F56D45;
+}
+
+.buttons {
+  margin-top: 40px;
 }

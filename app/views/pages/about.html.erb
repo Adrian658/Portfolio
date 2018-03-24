@@ -3,57 +3,59 @@
       <div class="jumbotron">
         <h2>What I'm up to right now</h2>
         <p>Continuing to develop and improve on this portfolio website</p>
-        <hr class="about-me-hr-jumbo" align="left" width="5%">
+        <hr class="about-me-hr-jumbo" align="left" width="70px">
         <p>Building a stack-overflow esque web app for college students with a friend</p>
-        <hr class="about-me-hr-jumbo" align="left" width="5%">
+        <hr class="about-me-hr-jumbo" align="left" width="70px">
         <p>Searching for summer internship in AI related field</p>
-        <hr class="about-me-hr-jumbo" align="left" width="5%">
+        <hr class="about-me-hr-jumbo" align="left" width="70px">
         <p>Building photography portfolio</p>
-        <hr class="about-me-hr-jumbo" align="left" width="5%">
+        <hr class="about-me-hr-jumbo" align="left" width="70px">
         <p>Learning cool card tricks to impress my interviewers</p>
-        <hr class="about-me-hr-jumbo" align="left" width="5%">
+        <hr class="about-me-hr-jumbo" align="left" width="70px">
+        <p>Planning my study abroad trip to Australia</p>
+        <hr class="about-me-hr-jumbo" align="left" width="70px">
       </div>
   </div>
 </div>
 <div class="inner cover cover-about about-me-container">
   <div class="row">
-    <div class="col-md-6 profile-pic-bgd">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="">
-            <a href="" class="btn doc-button">Resume</a>
-          </div>
-          <div class="">
-            <a href="" class="btn doc-button">Transcript</a>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <%= image_tag "ProfilePic.JPG", width: '80%', height: '95%', class: 'profile-pic' %>
-        </div>
-      </div>
+    <div class="col-md-4 profile-pic-bgd">
+      <%= image_tag "ProfilePic.JPG", class: 'profile-pic' %>
     </div>
-    <div class="col-md-1">
 
-    </div>
-    <div class="col-md-5">
+    <div class="col-md-8">
       <div class="about-me-statement">
-        <h1 id="">About Me</h1>
-        <hr class="about-me-hr" align="left" width="25%">
-        <p>I am currently a second year Computer Science major at
-          <a href="https://case.edu" id="CWRU-link">Case Western Reserve University</a>.
-          I recently switched to CS, so I am relatively new to the programming practice, but what I lack in experience I make
-          up for in passion. I love to code, and I am getting better at it everyday. Whether you are a potential employer
-          or just another fellow coder, lets connect!
-        </p>
+        <div class="row">
+          <div class="col-md-7">
+            <h1 id="">About Me</h1>
+            <hr class="about-me-hr" align="left" width="25%">
+            <p>I am currently a second year Computer Science major at
+              <a href="https://case.edu" id="CWRU-link">Case Western Reserve University</a>.
+              I recently switched to CS, so I am relatively new to the programming practice, but what I lack in experience I make
+              up for in passion. I love to code, and I am getting better at it everyday. Whether you are a potential employer
+              or just another fellow coder, lets connect!
+            </p>
+            <div class="buttons">
+              <a href="" class="btn doc-button doc-button-left">Resume</a>
+              <a href="" class="btn doc-button">Transcript</a>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <% @skills.each do |skill| %>
+              <div class="skill">
+                <h4><%= skill.title %></h4>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-animated progress-bar-striped bg-custom" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="row skills">
-  <div class="col-md-12">
-    <h1>Skills</h1>
-  </div>
-</div>
+
 <div class="row hobbies">
   <div class="col-md-12">
     <h1>Hobbies</h1>
