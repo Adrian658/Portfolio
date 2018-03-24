@@ -6,6 +6,10 @@
   --jumbotron-padding-y: 3rem;
 }
 
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
