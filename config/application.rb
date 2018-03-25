@@ -26,7 +26,7 @@ module DevcampPortfolio
 
     config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
-    #config.assets.compile = false
+    config.assets.compile = true
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
