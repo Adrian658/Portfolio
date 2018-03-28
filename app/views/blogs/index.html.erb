@@ -15,8 +15,6 @@
     <%= link_to 'Blog topics', topics_path, class: 'btn btn-secondary' %>
   </h3>
 
-  <%= paginate @blogs, class: 'pagination' %>
-
   <%= render @blogs %>
 
   <%= paginate @blogs, class: 'pagination' %>

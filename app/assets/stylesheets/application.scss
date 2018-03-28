@@ -105,10 +105,6 @@ body {
 /*
  * Cover
  */
- .cover-contact {
-   padding-top: 8%;
- }
-
 .cover-about {
   padding-top: 1%;
 }
@@ -287,6 +283,20 @@ button .fas {
   padding-bottom: 10px;
 }
 
+.contact-body > h1 {
+  text-align: center;
+}
+
+.jumbo-contact {
+  margin-top: 30px;
+  background-color: rgba(49, 49, 49, 0.6);
+  color: white;
+}
+
+.jumbotron {
+  padding: 2rem 2rem;
+}
+
 .profile-pic {
   //border-radius: 50%;
   padding-top: 10px;
@@ -314,7 +324,7 @@ button .fas {
   height: 100%;
 }
 
-.jumbotron {
+.jumbo-about {
   margin-top: 30px;
   background-color: rgba(49, 49, 49, 0.6);
   color: white;
@@ -384,4 +394,32 @@ button .fas {
 
 .buttons {
   margin-top: 40px;
+}
+
+.placeholder {
+  background-color: black;
+}
+
+.contact-hr-jumbo {
+  margin-bottom: 50px;
+  background-color: #F56D45;
+  height: 2px;
+}
+
+.col-custom {
+  background-color: rgba(49, 49, 49, 0.6);
+  padding-top: 10px;
+  padding-left: 8px;
+  padding-bottom: 0.1px;
+  border-left: 3px solid rgba(245, 109, 69, 1);
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-left: 30px;
+  margin-top: 100px;
+}
+
+.text-shadow {
+  text-shadow: 2px 1px 3px #6c757d;
 }
