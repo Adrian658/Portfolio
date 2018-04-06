@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'tech-news', to: 'pages#tech_news'
 
-  get 'pages/download_resume', to: 'pages#about'
+  get 'pages/download_resume'
   get 'pages/download_transcript'
 
   resources :blogs do
