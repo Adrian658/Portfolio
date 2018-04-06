@@ -4,13 +4,13 @@
         <h2>What I'm up to right now</h2>
         <p>Continuing to develop and improve on this portfolio website</p>
         <hr class="about-me-hr-jumbo" align="left" width="70px">
-        <p>Building a stack-overflow esque web app for college students with a friend</p>
+        <p>Building a Q&A web app for college students with a friend</p>
         <hr class="about-me-hr-jumbo" align="left" width="70px">
-        <p>Searching for summer internship in AI related field</p>
+        <p>Searching for summer internship</p>
         <hr class="about-me-hr-jumbo" align="left" width="70px">
         <p>Building photography portfolio</p>
         <hr class="about-me-hr-jumbo" align="left" width="70px">
-        <p>Learning cool card tricks to impress my interviewers</p>
+        <p>Studying sleight of hand magic</p>
         <hr class="about-me-hr-jumbo" align="left" width="70px">
         <p>Planning my study abroad trip to Australia</p>
         <hr class="about-me-hr-jumbo" align="left" width="70px">
@@ -22,7 +22,6 @@
     <div class="col-md-4 profile-pic-bgd">
       <%= image_tag "ProfilePic.JPG", class: 'profile-pic' %>
     </div>
-
     <div class="col-md-8">
       <div class="about-me-statement">
         <div class="row">
@@ -36,8 +35,8 @@
               or just another fellow coder, lets connect!
             </p>
             <div class="buttons">
-              <a href="" class="btn doc-button doc-button-left">Resume</a>
-              <a href="" class="btn doc-button">Transcript</a>
+              <%= link_to 'Resume', pages_download_resume_url, class: "btn doc-button doc-button-left" %>
+              <%= link_to 'Transcript', pages_download_transcript_url, class: "btn doc-button" %>
             </div>
           </div>
           <div class="col-md-5">
