@@ -52,7 +52,7 @@ class PortfoliosController < ApplicationController
 	    respond_to do |format|
 	      format.html { redirect_to portfolios_url, notice: 'Record was successfully removed.' }
 	    end
-  	end
+		end
 
   	private
 
