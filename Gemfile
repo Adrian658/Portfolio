@@ -77,4 +77,12 @@ gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'sprockets', '~>3.7.2'
 
+#Removed from applicaiton.js
+#//= require rails-ujs
+#//= require jquery-ui
+#//= require cocoon
+#//= require gritter
+#//= require turbolinks
+
+
 ruby "2.4.0"
