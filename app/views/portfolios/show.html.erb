@@ -13,8 +13,8 @@
 			<h3><%= @portfolio_item.title %></h3>
 
 			<em><%= @portfolio_item.subtitle %></em>
-
-			<p><%= @portfolio_item.body %></p>
+			
+			<p><%= markdown(@portfolio_item.body) %></p>
 			<hr>
 			<h3>Technologies Used</h3>
 			<% @portfolio_item.technologies.each do |technology| %>
