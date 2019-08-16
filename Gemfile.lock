@@ -285,6 +285,7 @@ PLATFORMS
 
 DEPENDENCIES
   CWRU_view_tool (~> 0.1.0)
+  autoprefixer-rails
   bootstrap (~> 4.0.0)
   byebug
   carrierwave (~> 1.2, >= 1.2.2)
