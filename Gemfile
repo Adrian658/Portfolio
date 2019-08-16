@@ -64,7 +64,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-gem 'rails-ujs', '~> 0.1.0'
+#gem 'rails-ujs', '~> 0.1.0'
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
@@ -78,8 +78,6 @@ gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'sprockets', '~>3.7.2'
 
 #Removed from applicaiton.js
-#//= require rails-ujs
-#//= require jquery-ui
 #//= require cocoon
 #//= require gritter
 #//= require turbolinks
