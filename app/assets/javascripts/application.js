@@ -13,7 +13,7 @@
 //= require jquery
 //= require rails-ujs
 //= require jquery-ui
-//= require bootstrap
+
 //= require html.sortable
 //= require cocoon
 //= require gritter
