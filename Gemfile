@@ -78,8 +78,6 @@ gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'sprockets', '~>3.7.2'
 
 #Removed from applicaiton.js
-#//= require cocoon
-#//= require gritter
 #//= require turbolinks
 
 
