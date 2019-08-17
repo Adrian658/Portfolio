@@ -1,4 +1,7 @@
+@import "jquery-ui";
 @import "bootstrap";
+@import "font-awesome";
+@import "gritter";
 
 :root {
   --jumbotron-padding-y: 3rem;
@@ -23,6 +26,10 @@ body {
 
 .jumbotron p:last-child {
   margin-bottom: 0;
+}
+
+.nav-item {
+  margin-right: 1rem;
 }
 
 .jumbotron-heading {

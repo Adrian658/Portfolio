@@ -11,7 +11,26 @@
           <%= link_to 'View', portfolio_show_path(portfolio_item.id), class: "btn btn-sm btn-outline-secondary" %>
           <%= link_to 'Edit', edit_portfolio_path(portfolio_item.id), class: "btn btn-sm btn-outline-secondary" if logged_in?(:site_admin)%>
         </div>
-        <small class="text-muted">9 mins</small>
+        <small class="text-muted"> <%= seconds = (Time.now.utc - 
+                                        Time.new(portfolio_item.updated_at.year, portfolio_item.updated_at.month, portfolio_item.updated_at.day, portfolio_item.updated_at.hour, portfolio_item.updated_at.min, portfolio_item.updated_at.sec, "+00:00")).to_i;
+                                        minutes = (seconds / 60).to_i;
+                                        hours = (minutes / 60).to_i; 
+                                        days = (hours / 24).to_i;
+                                        months = (days / 30).to_i;
+                                        years = (months / 12).to_i;
+                                        if years > 0
+                                          "Last updated " + years.to_s + " years ago"
+                                        elsif months > 0
+                                          "Last updated " + months.to_s + " months ago"
+                                        elsif days > 0
+                                          "Last updated " + days.to_s + " days ago"
+                                        elsif hours > 0
+                                          "Last updated " + hours.to_s + " hours ago"
+                                        elsif minutes > 0
+                                          "Last updated " + minutes.to_s + " minutes ago" 
+                                        else
+                                        "Last updated " + seconds.to_s + " seconds ago" 
+                                        end %> </small>
       </div>
     </div>
   </div>
