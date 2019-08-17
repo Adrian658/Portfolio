@@ -56,15 +56,15 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.2'
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap', '~> 4.0.0'
 gem "autoprefixer-rails"
 gem 'CWRU_view_tool', '~> 0.1.0'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
-gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+#gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-gem 'rails-ujs', '~> 0.1.0'
+#gem 'rails-ujs', '~> 0.1.0'
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
