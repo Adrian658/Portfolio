@@ -29,12 +29,18 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 40%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .jumbotron p:last-child {
   margin-bottom: 0;
+}
+
+.container {
+  padding-bottom: 20px;
+}
+
+.buttons {
+  padding-top: 20px;
 }
 
 .nav-item {
