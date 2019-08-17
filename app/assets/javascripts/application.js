@@ -13,7 +13,7 @@
 //= require jquery3
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require jquery-ui
+
 //= require html.sortable
 //= require cable
 //= require_tree .
