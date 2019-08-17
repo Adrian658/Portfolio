@@ -1,13 +1,15 @@
+
 <section class="jumbotron text-center">
   <div class="container">
     <h1><%= link_to 'My Portfolio', portfolios_path, class: 'jumbotron-heading' %></h1>
     <p class="lead text-muted">Below are some of my favorite projects that I have worked on in the last two years.
-      Some projects I created in school, others I created for work, but the most interesting ones (in my opinion) were created for fun,
-      because that&apos;s what inspires me as a Computer Science student.
-    </p>
-    <p>
-      <%= link_to 'Find out more about me', about_me_path, class: 'btn btn-primary' %>
-      <%= link_to 'Check out my blog', blogs_path, class: 'btn btn-secondary' %>
+      Some of these projects I created for school, others I created for work, but the most interesting ones (in my opinion) were created for fun,
+      because that&apos;s what inspires me to pursue programming.
     </p>
   </div>
+  <%= image_tag "inspiring-quote.png", id: 'background', alt: "Profile Image" %>
+  <p>
+      <%= link_to 'Find out more about me', about_me_path, class: 'btn btn-primary' %>
+      <%= link_to 'Check out my blog', blogs_path, class: 'btn btn-secondary' %>
+  </p>
 </section>
