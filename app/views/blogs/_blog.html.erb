@@ -5,7 +5,7 @@
   </div>
 
   <hr>
-  <p><%= markdown(blog.body) %></p>
+  <p><%= markdown(blog.body.truncate_words(60)) %></p>
   <hr>
 
   <p class="blog-post-meta">
