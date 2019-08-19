@@ -1,5 +1,6 @@
 <div class="blog-post card">
   <div class="card-body">
+
     <div class="row blue-links">
       <div class="col-md-12 blog-post-title">
           <strong class="blog-post-title"><%= link_to blog.title.upcase, blog %></strong>
@@ -7,7 +8,11 @@
     </div>
 
     
-    <p><%= markdown(blog.body.truncate_words(50)) %> <%= link_to "Read more", blog %></p>
+    <div class="blog-body-index">
+      <p>
+        <%= markdown(ERB.new(blog.body.truncate_words(50), nil, '-').result() + " " + (link_to "Continue reading", blog)) %>
+      </p>
+    </div>
      
 
     <p class="blog-post-meta">
