@@ -1,22 +1,12 @@
-<aside class="col-md-4 blog-sidebar">
-  <div class="p-3 mb-3 bg-light rounded">
-    <h4 class="font-italic">About</h4>
-    <p class="mb-0">A collection of blogs written by me about some of the programming projects I have undertaken</p>
+<div class="blog-sidebar">
+
+  <div class="">
+    <p class="description">
+      This blog contains in depth descriptions of some of my favourite projects I have worked on.
+      Check them out and comment if you're interested!
+    </p>
   </div>
 
   <%= source_helper("alert alert-info alert-dismissible fade show blog-sidebar-source") %>
 
-  <div class="p-3">
-    <h4>Topics</h4>
-    <% @side_bar_topics.each do |topic| %>
-      <p class='font-italic'><%= link_to topic.title, topic_path(topic) %></p>
-    <% end %>
-  </div>
-
-  <div class="p-3">
-    <h4 class="font-italic">Social Media Links</h4>
-    <ol class="list-unstyled social-links">
-      <%= render 'shared/social_links' %>
-    </ol>
-  </div>
-</aside>
+</div>

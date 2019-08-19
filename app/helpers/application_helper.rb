@@ -26,7 +26,7 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    CWRUViewTool::Renderer.copyright 'Adrian Guzman', 'Dunder Mifflin Paper Company, Inc'
+    CWRUViewTool::Renderer.copyright 'Adrian Guzman', 'Case Western Reserve University'
   end
 
   def nav_items

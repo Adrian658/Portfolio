@@ -1,15 +1,20 @@
-<div class="blog-post">
-  <div class="blue-links">
-    <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
-    <%= render partial: 'blogs/admin_actions', locals: {blog: blog} %>
+<div class="blog-post card">
+  <div class="card-body">
+    <div class="row blue-links">
+      <div class="col-md-12 blog-post-title">
+          <strong class="blog-post-title"><%= link_to blog.title.upcase, blog %></strong>
+      </div>
+    </div>
+
+    
+    <p><%= markdown(blog.body.truncate_words(50)) %> <%= link_to "Read more", blog %></p>
+     
+
+    <p class="blog-post-meta">
+      Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago
+      |
+      <i><%= Topic.find(blog.topic_id).title %> </i> 
+      <%= render partial: 'blogs/admin_actions', locals: {blog: blog} %>
+    </p>
   </div>
-
-  <hr>
-  <p><%= markdown(blog.body.truncate_words(100)) %></p>
-  <hr>
-
-  <p class="blog-post-meta">
-    Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago
-  </p>
-
 </div>

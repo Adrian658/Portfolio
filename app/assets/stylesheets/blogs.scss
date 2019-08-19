@@ -5,17 +5,33 @@
 
 /* stylelint-disable selector-list-comma-newline-after */
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  //overflow-x: hidden;
 }
 
 .blog-header {
+  margin-top: 50px;
   line-height: 1;
-  border-bottom: 1px solid #e5e5e5;
+  font-weight: 400;
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  //border-bottom: 1px solid #e5e5e5;
+}
+
+.masthead {
+  color: rgb(231, 226, 226);
+}
+
+.new-sidebar {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: #343a40;
 }
 
 .blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  //font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2rem;
 }
 
 .blog-header-logo:hover {
@@ -34,6 +50,10 @@ h1, h2, h3, h4, h5, h6 {
   .display-4 {
     font-size: 3rem;
   }
+}
+
+#secondary-nav {
+  width: 100%;
 }
 
 .nav-scroller {
@@ -66,6 +86,27 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: .875rem;
+}
+
+.blog-nav {
+  padding-top: 2rem;
+  color: #7D8188;
+}
+
+.description {
+  color: #7D8188;;
+}
+
+.blog-nav:hover {
+  color: #7D8188;
+}
+
+li > .active {
+  color: white;
+}
+
+.active:hover {
+  color: white;
 }
 
 .card-img-right {
@@ -116,20 +157,40 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2rem;
 }
 
+.hr-divider {
+  background-color: lightgray;
+  height: 1px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  //margin-top: 2px;
+}
+
 /*
  * Blog posts
  */
 .blog-post {
   margin-bottom: 4rem;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
+  color: #999;
 }
 .blog-post-title {
+  text-align: center;
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
   color: #999;
+  font-size: 0.7rem;
+}
+
+.blogs {
+  background-color: #f0f0f0;
+}
+
+.blog-nav {
+  padding-top: 0px;
+  text-transform: uppercase;
 }
 
 /*
@@ -141,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
-  margin-top: 20px;
+  //margin-top: 20px;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
@@ -209,7 +270,7 @@ a.page-link:hover {
 }
 
 .blogcrumbs > a {
-  margin-right: 15px;
+  margin-right: 0px;
 }
 
 .blogcrumbs > a:hover {
@@ -225,5 +286,12 @@ a.page-link:hover {
 }
 
 .blog-main {
-  font-family: 'Dosis', sans-serif;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 5rem;
+}
+
+.topic-show {
+  text-align: center;
+  margin-bottom: 40px;
 }
