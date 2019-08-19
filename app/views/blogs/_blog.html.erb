@@ -10,7 +10,7 @@
     
     <div class="blog-body-index">
       <p>
-        <%= markdown(ERB.new(blog.body.truncate_words(50), nil, '-').result() + " " + (link_to "Continue reading", blog)) %>
+        <%= markdown(ERB.new(blog.body.truncate_words(50, omission: '.. '), nil, '-').result() + " " + (link_to "Continue reading...", blog)) %>
       </p>
     </div>
      
