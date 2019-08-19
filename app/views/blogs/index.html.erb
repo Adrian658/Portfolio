@@ -1,4 +1,11 @@
 <div class="container blog-main">
+
+    <h3 class="pb-3 mb-4 font-italic border-bottom new-blog">
+      <% if logged_in?(:site_admin) %>
+        <%= link_to 'Draft a New Blog', new_blog_path, class: "btn btn-secondary" %>
+      <% end %>
+      <%= link_to 'Blog topics', topics_path, class: 'btn btn-secondary' %>
+    </h3>
   
     <%= render @blogs %>
   

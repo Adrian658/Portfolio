@@ -20,5 +20,15 @@ module BlogsHelper
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
   end
+
+  def image_generator(height:, width:)
+    "http://placehold.it/#{height}x#{width}"
+  end
+
+  def blog_img img, type
+    if img.model.image?
+      img
+    end
+  end
   
 end
