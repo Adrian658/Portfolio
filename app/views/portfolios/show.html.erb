@@ -1,26 +1,29 @@
-<div class="container portfolio-container">
-	<div class="row">
-		<div class="col-md-12">
-			<%= link_to 'View all', portfolios_path, class: 'nav-link' %>
-			<%= link_to "Edit", edit_portfolio_path(@portfolio_item.id), class: 'nav-link' if logged_in?(:site_admin) %>
-			<%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'nav-link' if logged_in?(:site_admin) %>
-		</div>
-		<div class="col-md-7">
-			<%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%' %>
-		</div>
-		<div class="col-md-5">
-
-			<h3><%= @portfolio_item.title %></h3>
-
-			<em><%= @portfolio_item.subtitle %></em>
-			
-			<p><%= markdown(@portfolio_item.body) %></p>
-			<hr>
-			<h3>Technologies Used</h3>
-			<% @portfolio_item.technologies.each do |technology| %>
-				<p> <%= technology.name %> </p>
-			<% end %>
-
+<div class="portfolio-show">
+	<div class="container portfolio-contain p-4">
+		<div class="row">
+			<div class="col-md-6 pl-5 pt-3 port-show-back">
+				<%= link_to '', portfolios_path, class: 'fas fa-caret-left' -%>
+			</div>
+			<div class="col-md-6 pb-5 pt-3 text-light">
+					<h2><%= @portfolio_item.title %></h2>
+					<em><%= @portfolio_item.subtitle %></em>
+			</div>
+			<div class="col-md-6 pl-5 port-show-left-sidebar">
+				<%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%' %>
+				<div class="edit-links">
+					<%= link_to "Edit", edit_portfolio_path(@portfolio_item.id), class: '' if logged_in?(:site_admin) %>
+					<%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' }, class: '' if logged_in?(:site_admin) %>		
+				</div>	
+			</div>
+			<div class="col-md-4 text-light">
+				<%= markdown(@portfolio_item.body) %>				
+			</div>
+			<div class="col-md-2 text-light pr-5">
+				<h4>Technologies</h4>
+				<% @portfolio_item.technologies.each do |technology| %>
+					<li><%= technology.name %></li>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>

@@ -15,6 +15,10 @@ body {
   border: none;
 }
 
+.card-body {
+  background-color: whitesmoke;
+}
+
 .jumbotron-custom {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
@@ -61,8 +65,32 @@ body {
   width: 30%;
 }
 
+.portfolio-contain {
+  background-color: rgba(49, 49, 49, 0.8);
+}
+
 .buttons {
   padding-top: 20px;
+}
+
+.edit-links > a {
+  color: white;
+  display: inline;
+  padding-right: 15px;
+}
+
+.edit-links {
+  margin-top: 10px;
+}
+
+.port-show-back > a {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.port-show-back > a:hover {
+  color: grey;
+  text-decoration: none;
 }
 
 .nav-item {
@@ -152,4 +180,14 @@ footer p {
   background-image: url(QueensTown.jpg);
   background-size: cover;
   background-position-y: 17%;
+}
+
+.portfolio-show {
+  background-image: url(QueensTown.jpg);
+  //background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
 }
