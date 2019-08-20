@@ -3,7 +3,7 @@
     <%= link_to (image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), class: "rounded-top", width: '100.2%'), portfolio_show_path(portfolio_item.id), class: "slide-page" %>
     <div class="card-body">
       <div class="card-text">
-        <%= portfolio_item.title %>
+        <em><%= portfolio_item.title %></em>
       </div>
       <div class="d-flex justify-content-between align-items-center">
         <small class="text-muted"> <%= seconds = (Time.now.utc - 
@@ -20,7 +20,7 @@
                                             temp = temp + "s"
                                           end
                                           if months > 0
-                                            temp = temp + " and " + months.to_s + " months ago"
+                                            temp = temp + " and " + (months - years*12).to_s + " months ago"
                                           else
                                             temp = temp + " ago"
                                           end
