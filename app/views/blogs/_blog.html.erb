@@ -1,5 +1,5 @@
 <div class="blog-post card">
-  <%= image_tag blog.image, width: '100%', height: '400rem' %>
+  <%= image_tag blog.image, class: "rounded-top", width: '100%', height: '300rem' %>
   <div class="card-body">
 
     <div class="row blue-links">
@@ -19,7 +19,10 @@
     <p class="blog-post-meta">
       Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago
       |
-      <i><%= Topic.find(blog.topic_id).title %> </i> 
+      <i class="fas fa-comments"></i>
+      <%= blog.comments.count %>
+      |
+      <i><%= Topic.find(blog.topic_id).title %> </i>
       <%= render partial: 'blogs/admin_actions', locals: {blog: blog} %>
     </p>
   </div>

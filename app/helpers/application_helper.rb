@@ -58,17 +58,17 @@ module ApplicationHelper
     ]
   end
 
-  def nav_helper style, tag_type, tag_type_class
+  def nav_helper root, style, tag_type, tag_type_class
     nav_links = ''
     nav_items.each do |item|
-      nav_links << "<#{tag_type} class='#{tag_type_class}'><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type} class='#{tag_type_class}'>"
+      nav_links << "<#{tag_type} class='#{tag_type_class}'><a href='#{item[:url]}' class='#{style} #{active? item, root}'>#{item[:title]}</a></#{tag_type} class='#{tag_type_class}'>"
     end
 
     nav_links.html_safe
   end
 
-  def active? path
-    "active" if current_page? path
+  def active? item, root
+    "active" if (root == item[:title]) or current_page? item[:url]
   end
 
   def alerts
