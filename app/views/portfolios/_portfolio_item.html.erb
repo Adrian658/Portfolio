@@ -1,35 +1,40 @@
 <div class="col-md-4">
   <div class="card mb-4 box-shadow portfolio-item" data-id="<%= portfolio_item.id %>">
-    <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), class: "rounded-top", width: '100%' %>
+    <%= link_to (image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), class: "rounded-top", width: '100.2%'), portfolio_show_path(portfolio_item.id), class: "slide-page" %>
     <div class="card-body">
-      <p class="card-text">
-        <%= portfolio_item.title %>: 
-        <i><%= portfolio_item.subtitle %></i>
-      </p>
+      <div class="card-text">
+        <%= portfolio_item.title %>
+      </div>
       <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <%= link_to 'View', portfolio_show_path(portfolio_item.id), class: "btn btn-sm btn-outline-secondary" %>
-          <%= link_to 'Edit', edit_portfolio_path(portfolio_item.id), class: "btn btn-sm btn-outline-secondary" if logged_in?(:site_admin)%>
-        </div>
         <small class="text-muted"> <%= seconds = (Time.now.utc - 
-                                        Time.new(portfolio_item.updated_at.year, portfolio_item.updated_at.month, portfolio_item.updated_at.day, portfolio_item.updated_at.hour, portfolio_item.updated_at.min, portfolio_item.updated_at.sec, "+00:00")).to_i;
+                                        Time.new(portfolio_item.created_at.year, portfolio_item.created_at.month, portfolio_item.created_at.day, portfolio_item.created_at.hour, portfolio_item.created_at.min, portfolio_item.created_at.sec, "+00:00")).to_i;
                                         minutes = (seconds / 60).to_i;
                                         hours = (minutes / 60).to_i; 
                                         days = (hours / 24).to_i;
                                         months = (days / 30).to_i;
                                         years = (months / 12).to_i;
+                                        return_string = "Project created "
                                         if years > 0
-                                          "Last updated " + years.to_s + " years ago"
+                                          temp = return_string + years.to_s + " year"
+                                          if years > 1
+                                            temp = temp + "s"
+                                          end
+                                          if months > 0
+                                            temp = temp + " and " + months.to_s + " months ago"
+                                          else
+                                            temp = temp + " ago"
+                                          end
+                                          temp
                                         elsif months > 0
-                                          "Last updated " + months.to_s + " months ago"
+                                          return_string + months.to_s + " months ago"
                                         elsif days > 0
-                                          "Last updated " + days.to_s + " days ago"
+                                          return_string + days.to_s + " days ago"
                                         elsif hours > 0
-                                          "Last updated " + hours.to_s + " hours ago"
+                                          return_string + hours.to_s + " hours ago"
                                         elsif minutes > 0
-                                          "Last updated " + minutes.to_s + " minutes ago" 
+                                          return_string + minutes.to_s + " minutes ago" 
                                         else
-                                        "Last updated " + seconds.to_s + " seconds ago" 
+                                          return_string+ seconds.to_s + " seconds ago" 
                                         end %> </small>
       </div>
     </div>

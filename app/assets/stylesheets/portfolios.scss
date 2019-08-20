@@ -67,6 +67,7 @@ body {
 
 .portfolio-contain {
   background-color: rgba(49, 49, 49, 0.8);
+  min-height: 35rem;;
 }
 
 .buttons {
@@ -95,6 +96,20 @@ body {
 
 .nav-item {
   margin-right: 1rem;
+}
+
+li > .active, li > .active:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.text-muted-custom {
+  color: #6c757d;
+}
+
+.text-muted-custom:hover {
+  color: darkgrey;
+  text-decoration: none;
 }
 
 .jumbotron-heading {
@@ -141,12 +156,8 @@ footer p {
   background-color: #d1ecf1;
 }
 
-.portfolio-container {
-  padding-top: 40px;
-}
-
-.portfolio-item > img {
-  height: 13rem;
+.portfolio-item > a > img {
+  height: 13em;
 }
 
 .social-links a {
