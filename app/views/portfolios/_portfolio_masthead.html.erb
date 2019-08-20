@@ -1,12 +1,22 @@
+<section class="jumbotron-custom text-center text-light">
+  <div class="row">
+    <div class="col-md-3">
 
-<section class="jumbotron text-center">
-  <div class="container masthead-contain">
-    <h1><%= link_to 'My Portfolio', portfolios_path, class: 'jumbotron-heading' %></h1>
-    <p class="lead text-muted">Below are some of my favorite projects that I have worked on in the last two years.
-      Some of these projects I created for school, others I created for work, but the most interesting ones (in my opinion) were created for fun.
-    </p>
+    </div>
+    <div class="col-md-6">
+        <div class="container masthead-contain rounded p-4">
+          <h1>Project Portfolio</h1>
+          
+          <p class="lead">Below are some of my favorite projects that I have worked on in the last two years.
+            Some of these projects I created for school, others I created for work, but the most interesting ones (in my opinion) were created for fun.
+          </p>
+          <hr>
+          <%= render 'shared/blog_social_links' %>
+        </div>
+    </div>
+    <div class="col-md-3">
+
+    </div>
   </div>
-  <%= image_tag "inspiring-quote.png", id: 'portfolio_quote', alt: "Profile Image" %>
-  <%= render 'shared/blog_social_links' %>
 </section>
 
