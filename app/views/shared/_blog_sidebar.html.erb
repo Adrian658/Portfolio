@@ -1,6 +1,6 @@
 <div class="blog-sidebar border-left-blue">
 
-  <div class="text-muted">
+  <div class="info-text-box text-muted">
     <div class="first-msg visible">
       This blog contains in depth descriptions of some of my favourite projects I have worked on.
       Check them out and comment if you're interested!
@@ -25,7 +25,7 @@ function random_no(){
      jQuery('.blog-sidebar').html(ran);
 }
 
-function custom_func(fade_time){
+function change_text(fade_time){
     var displayed = $( ".visible" )[0]
     if ($(displayed).hasClass("last-msg")) {
       var next_displayed = $(".first-msg")[0];
@@ -33,12 +33,12 @@ function custom_func(fade_time){
     else {
       var next_displayed = $(displayed).next();
     }
-    $(displayed).hide("fade", { direction: "left" }, fade_time);
+    $(displayed).slideUp(fade_time)
     $(displayed).removeClass("visible");
     setTimeout(function(){
-      $(next_displayed).show("fade", { direction: "right" }, fade_time);
+      $(next_displayed).slideDown(fade_time);
       $(next_displayed).removeClass("hidden").addClass("visible");
-    }, fade_time);
+    }, fade_time+100);
 }
            
 //window.setInterval(function(){
@@ -48,7 +48,7 @@ function custom_func(fade_time){
 $(".hidden").hide();
 window.setInterval(function(){
     //$(".visible").next().addClass("visible");
-    custom_func(800)
+    change_text(800)
     //$(".visible").removeClass("visible");
     //$(".visible").show("slide", { direction: "right" }, 400);
 }, 4000)
