@@ -13,8 +13,9 @@
                                 </div>
                                 <div class="header">
                                     <div class="pl-3 pt-4 pb-1 link-container">
+                                        <p class="scroll-out-topics font-italic"><%= link_to 'All Topics', blogs_path, class: "" %></p>
                                         <% @side_bar_topics.each do |topic| %>
-                                            <p class='font-italic'><%= link_to topic.title, topic_path(topic) %></p>
+                                            <p class='scroll-out-topics font-italic'><%= link_to topic.title, topic_path(topic) %></p>
                                         <% end %>
                                     
                                         <% if logged_in?(:site_admin) %>
@@ -52,4 +53,12 @@
             }
         });
         });
+
+    $(document).ready(function(){
+    $(".scroll-out-topics").on('click',function(e){
+        //e.preventDefault();
+        $(this).hide("slide", { direction: "left" }, 600);
+        $(".header").slideUp(400);
+    });
+    });
     </script>
