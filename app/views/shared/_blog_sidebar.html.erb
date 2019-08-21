@@ -2,15 +2,15 @@
 
   <div class="info-text-box text-muted">
     <div class="first-msg visible">
-      This blog contains in depth descriptions of some of my favourite projects I have worked on.
+      This 1 blog contains in depth descriptions of some of my favourite projects I have worked on.
       Check them out and comment if you're interested!
     </div>
     <div class="hidden">
-      This blog contains in depth descriptions of some of my favourite projects I have worked on.
+      This 2 blog contains in depth descriptions of some of my favourite projects I have worked on.
       Check them out and comment if you're interested!
     </div>
     <div class="last-msg hidden">
-      This blog contains in depth descriptions of some of my favourite projects I have worked on.
+      This 3 blog contains in depth descriptions of some of my favourite projects I have worked on.
       Check them out and comment if you're interested!
     </div>
   </div>
@@ -26,30 +26,32 @@ function random_no(){
 }
 
 function change_text(fade_time){
-    var displayed = $( ".visible" )[0]
+    var displayed = $( ".visible" )[0];
+    if (displayed == null) {
+      displayed = $(".first-msg")[0];
+    }
     if ($(displayed).hasClass("last-msg")) {
       var next_displayed = $(".first-msg")[0];
     }
     else {
       var next_displayed = $(displayed).next();
     }
-    $(displayed).slideUp(fade_time)
+    $(displayed).hide("blind", { direction: "left" }, fade_time);
     $(displayed).removeClass("visible");
     setTimeout(function(){
-      $(next_displayed).slideDown(fade_time);
+      $(next_displayed).show("blind", { direction: "left" }, fade_time);
       $(next_displayed).removeClass("hidden").addClass("visible");
     }, fade_time+100);
 }
-           
-//window.setInterval(function(){
+
+//timerRef = window.setInterval(function(){
        /// call your function here
 //      random_no();
-//}, 6000);
+//}, 3000);
 $(".hidden").hide();
-window.setInterval(function(){
-    //$(".visible").next().addClass("visible");
-    change_text(800)
-    //$(".visible").removeClass("visible");
-    //$(".visible").show("slide", { direction: "right" }, 400);
-}, 4000)
+var timerRef;
+clearInterval(timerRef);
+timerRef = window.setInterval(function(){
+    change_text(800);
+}, 10000)
 </script>
