@@ -1,12 +1,55 @@
 <div class="blog-sidebar border-left-blue">
 
   <div class="text-muted">
-    <p class="">
+    <div class="first-msg visible">
       This blog contains in depth descriptions of some of my favourite projects I have worked on.
       Check them out and comment if you're interested!
-    </p>
+    </div>
+    <div class="hidden">
+      This blog contains in depth descriptions of some of my favourite projects I have worked on.
+      Check them out and comment if you're interested!
+    </div>
+    <div class="last-msg hidden">
+      This blog contains in depth descriptions of some of my favourite projects I have worked on.
+      Check them out and comment if you're interested!
+    </div>
   </div>
 
   <%= source_helper("alert alert-info alert-dismissible fade show blog-sidebar-source") %>
 
 </div>
+
+<script type="text/javascript">
+function random_no(){
+     var ran=Math.random();
+     jQuery('.blog-sidebar').html(ran);
+}
+
+function custom_func(fade_time){
+    var displayed = $( ".visible" )[0]
+    if ($(displayed).hasClass("last-msg")) {
+      var next_displayed = $(".first-msg")[0];
+    }
+    else {
+      var next_displayed = $(displayed).next();
+    }
+    $(displayed).hide("fade", { direction: "left" }, fade_time);
+    $(displayed).removeClass("visible");
+    setTimeout(function(){
+      $(next_displayed).show("fade", { direction: "right" }, fade_time);
+      $(next_displayed).removeClass("hidden").addClass("visible");
+    }, fade_time);
+}
+           
+//window.setInterval(function(){
+       /// call your function here
+//      random_no();
+//}, 6000);
+$(".hidden").hide();
+window.setInterval(function(){
+    //$(".visible").next().addClass("visible");
+    custom_func(800)
+    //$(".visible").removeClass("visible");
+    //$(".visible").show("slide", { direction: "right" }, 400);
+}, 4000)
+</script>
