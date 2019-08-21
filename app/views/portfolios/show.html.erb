@@ -15,13 +15,12 @@
 					<%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' }, class: '' if logged_in?(:site_admin) %>		
 				</div>	
 			</div>
-			<div class="col-md-4 text-light">
+			<div class="col-md-4 port-show-body">
 				<%= markdown(@portfolio_item.body) %>				
 			</div>
-			<div class="col-md-2 text-light pr-5">
-				<h4>Technologies</h4>
+			<div class="col-md-2 pl-5">
 				<% @portfolio_item.technologies.each do |technology| %>
-					<li><%= technology.name %></li>
+					<li class="port-show-body pb-3"><%= technology.name %></li>
 				<% end %>
 			</div>
 		</div>

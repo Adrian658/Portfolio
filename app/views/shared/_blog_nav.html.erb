@@ -1,6 +1,15 @@
-<div class=" blog-nav">
+<div class="border-left-blue">
   <ul class="list-unstyled">
-    <%= nav_helper 'Blog', 'blog-nav', 'li', 'pb-1' %>
-    <%= login_helper "blog-nav", 'li', '' %>
+    <%= nav_helper 'Blog', 'blog-nav', 'div', 'pb-1 scroll-out' %>
+    <%= login_helper 'blog-nav', 'div', 'scroll-out pt-3' %>
   </ul>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".scroll-out").on('click',function(e){
+        //e.preventDefault();
+        $(this).hide("slide", { direction: "right" }, 600);
+    });
+    });
+</script>

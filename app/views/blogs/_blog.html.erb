@@ -1,10 +1,10 @@
-<div class="blog-post card">
+<div class="blog-post card rounded_top bg-blog">
   <%= image_tag blog.image, class: "rounded-top", width: '100%', height: '300rem' %>
   <div class="card-body">
 
     <div class="row blue-links">
       <div class="col-md-12 blog-post-title">
-          <strong class="blog-post-title"><%= link_to blog.title.upcase, blog %></strong>
+          <strong class="blog-post-title"><%= link_to blog.title, blog %></strong>
       </div>
     </div>
 
