@@ -385,6 +385,11 @@ a.page-link:hover {
 }
 
 .bg-blog {
+  background-color: rgba(255, 255, 255, 1);
+  background-image: none;
+}
+
+.bg-blog-transparent {
   background-color: rgba(255, 255, 255, 0.9);
   background-image: none;
 }
