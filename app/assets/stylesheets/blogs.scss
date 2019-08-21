@@ -114,13 +114,31 @@ div > .active {
   z-index: 3000;
 }
 
+.menu-btn > a {
+  color: rgb(230, 230, 230);
+}
+
 .menu-btn > a:hover{
   color: white;
   text-decoration: none;
 }
 
-.menu-btn > a {
+.comment-btn {
+  background-color: rgba(0,123,255, 0.8);
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 3000;
+  text-align: center;
+  margin: auto;
+}
+
+.comment-btn > a {
   color: rgb(230, 230, 230);
+}
+
+.comment-btn > a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .link-container > p > a {
@@ -190,7 +208,7 @@ div > .active {
  */
 .blog-title {
   margin-bottom: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 .blog-description {
@@ -200,7 +218,7 @@ div > .active {
 
 @media (min-width: 40em) {
   .blog-title {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -220,6 +238,15 @@ div > .active {
   //margin-top: 2px;
 }
 
+.comment-hr {
+  margin-bottom: 0px;
+}
+
+.comments-hide {
+  display: none;
+  //background-color: rgba(0,123,255, 0.8);
+}
+
 /*
  * Blog posts
  */
@@ -230,7 +257,7 @@ div > .active {
   border: none;
 }
 .blog-post-title {
-  //text-align: center;
+  color: black;
   margin-bottom: .25rem;
   font-size: 2.0rem;
 }
@@ -279,7 +306,7 @@ div > .active {
 }
 
 .blog-body-index a:hover {
-  color: #e7e2e2;
+  color: #666666;
 }
 
 .featured-link {
@@ -308,10 +335,6 @@ a.page-link:hover {
   border-color: #343a40;
 }
 
-#back-button {
-  margin-bottom: 18px;
-}
-
 .blog-post-title > a:hover {
   text-decoration: none;
 }
@@ -322,6 +345,10 @@ a.page-link:hover {
 
 .comment-card > .card {
   margin-top: 15px;
+}
+
+.card-body {
+  border-radius: 0px 50px 50px 0px;
 }
 
 
@@ -385,7 +412,7 @@ a.page-link:hover {
 }
 
 .bg-blog {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(240, 240, 240, 1);
   background-image: none;
 }
 
@@ -401,4 +428,12 @@ a.page-link:hover {
 
 .info-text-box {
   height: 6rem;
+}
+
+.author-image {
+  border-radius: 50%;
+}
+
+.author-text {
+  font-size: 0.8rem;
 }
