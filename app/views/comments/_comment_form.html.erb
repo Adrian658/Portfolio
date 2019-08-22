@@ -1,13 +1,12 @@
-<div class="mt-5">
+<div class="pb-3">
 
   <% unless current_user.is_a? GuestUser %>
     <%= form_for @comment, url: '#' do |f| %>
       <div class="form-group pt-3">
-        <%= f.label :comment %>
-        <%= f.text_area :content, class: 'form-control' %>
+        <%= f.text_area :content, class: 'form-control', placeholder: "Any thoughts?" %>
       </div>
   
-      <%= f.submit 'Post Comment', class: 'btn btn-secondary' %>
+      <%= f.submit 'Post Comment', class: 'btn transition submit-cmt-btn pt-1 pb-1 pl-4 pr-4' %>
     <% end %>
   <% end %>
 </div>
@@ -15,10 +14,25 @@
 <script type="text/javascript">
 
   $(document).ready(function(){
-    $(".login-comment-btn").hover(function(e){
-      $(this).addClass("btn-on");
+    $(".submit-cmt-btn").hover(function(e){
+      $(this).addClass("cmt-btn-on");
     }, function(e){
-      $(this).removeClass("btn-on");
+      $(this).removeClass("cmt-btn-on");
+    });
+  });
+
+  $(document).ready(function(){
+    $(".submit-cmt-btn").on("click", function(e){
+      //Check this block is open or not..
+      if (!$(".comments-hide").hasClass("open")) {
+        $(".comments-hide").show("blind", { direction: "up" }, 600);
+        $(".comments-hide").addClass("open");
+        $(".comment-btn").find("i").removeClass().addClass("fa fa-chevron-up");
+        $(".comment-btn").addClass("btn-on");
+        setTimeout(function(){
+          $(".comment-btn").removeClass("btn-on");
+        }, 600)
+      }
     });
   });
 

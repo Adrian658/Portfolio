@@ -1,18 +1,11 @@
 <div class="col-sm-12 blog-main">
-  <div>
-      <h1 class="topic-show"><%= @topic.title %> Blogs</h1>
-  </div>
 
-  <nav class="breadcrumb">
-      <%= link_to 'Blogs', blogs_path, class: 'breadcrumb-item' %>
-      <span class="breadcrumb-item text-muted"><%= @topic.title %></span>
-  </nav>
-
-  <hr>
+  <%= render 'shared/blog_index_title.html.erb' %>
 
   <%= paginate @blogs %>
 
   <%= render @blogs %>
 
   <%= paginate @blogs %>
+  
 </div>

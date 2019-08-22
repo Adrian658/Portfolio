@@ -10,7 +10,7 @@
             
             <div class="row blog-show-header pb-4 pl-0 pr-4">
               <div class="col-md-1">
-                <span class="back-btn p-2"><%= link_to '<i class="fas fa-caret-left"></i>'.html_safe, :back %></span>
+                <span class="back-btn transition"><%= link_to '<i class="fas fa-caret-left"></i>'.html_safe, :back %></span>
               </div>
               <div class="col-md-11">
                 <div class="blog-title float-right"><%= @blog.title %></div>
@@ -61,8 +61,8 @@
 
     </div>
     <div class="col-md-12">
-        <div id="comments" class="pb-5" data-blog-id="<%= @blog.id %>">
-            <div class="comments-hide pb-1">
+        <div class="pb-5">
+            <div id="comments" class="comments-hide pb-1" data-blog-id="<%= @blog.id %>">
               <%= render sort_comments(@blog.comments) %>
             </div>
             <div class="comment-btn transition">
