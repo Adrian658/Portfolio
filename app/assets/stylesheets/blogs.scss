@@ -107,6 +107,19 @@ div > .active {
   color: #007bff;
 }
 
+.back-btn, .back-btn > a {
+  //background-color: rgba(0,123,255, 1);
+  text-align: center;
+  //width: 20%;
+  padding: 4px;
+  color: rgb(0,123,255);
+  font-size: 1.5rem;
+}
+
+.imgimg {
+  border-radius: 0px 50px 0px 0px;
+}
+
 .menu-btn {
   background-color: rgba(0,123,255, 0.8);
   width: 40%;
@@ -123,22 +136,75 @@ div > .active {
   text-decoration: none;
 }
 
+.btn-on {
+  background-color: rgba(0,0,0, 0.8) !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-on > a {
+  color: whitesmoke !important;
+}
+
+.transition {
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:0.5s;
+}
+
+.blog-container {
+  //padding: 1rem;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 0px 50px 50px 0px;
+  z-index: 4000;
+}
+
 .comment-btn {
-  background-color: rgba(0,123,255, 0.8);
+  background-color: whitesmoke;
   width: 30%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
   z-index: 3000;
   text-align: center;
   margin: auto;
+  border-radius: 0px 0px 20px 20px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  //box-shadow: 0 6px 10px 4px rgba(0, 0, 0, 0.6);
 }
 
 .comment-btn > a {
-  color: rgb(230, 230, 230);
+  //font-style: italic;
+  //font-weight: bold;
+  color: rgba(0,123,255, 1);
 }
 
 .comment-btn > a:hover {
   color: white;
   text-decoration: none;
+}
+
+.comment-hr {
+  margin-bottom: 0px;
+}
+
+.comments-hide {
+  display: none;
+  //background-color: rgba(1, 96, 197, 1);
+  background-color: rgba(1, 58, 119, 0.95);
+  width: 500px;
+  margin: 0 auto;
+  box-shadow: inset 0 4px 10px 2px rgba(0, 0, 0, 0.6);
+  min-height: 100px;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .link-container > p > a {
@@ -210,7 +276,10 @@ div > .active {
   margin-bottom: 0;
   font-size: 1.5rem;
   font-weight: 400;
+  color: black;
+  overflow-wrap: break-word;
 }
+
 .blog-description {
   font-size: 1.1rem;
   color: #999;
@@ -238,24 +307,25 @@ div > .active {
   //margin-top: 2px;
 }
 
-.comment-hr {
-  margin-bottom: 0px;
-}
-
-.comments-hide {
-  display: none;
-  //background-color: rgba(0,123,255, 0.8);
-}
-
 /*
  * Blog posts
  */
 .blog-post {
-  margin-bottom: 4rem;
   font-size: 1.0rem;
   color: #999;
   border: none;
 }
+
+.blog-post-summary {
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 5rem;
+  font-size: 1.0rem;
+  color: #999;
+  border: none;
+  //padding: 1rem;
+  //box-shadow: 0 0 10px 4px rgba(0, 0, 0, 15);
+}
+
 .blog-post-title {
   color: black;
   margin-bottom: .25rem;
@@ -272,8 +342,8 @@ div > .active {
   font-size: 0.7rem;
 }
 
-.blog-show-body {
-
+#blog-show-hr {
+  margin-top: 0.5rem;
 }
 
 .blogs {
@@ -285,9 +355,6 @@ div > .active {
   text-transform: uppercase;
 }
 
-/*
- * Footer
- */
 .blog-footer {
   padding: 2.5rem 0;
   color: #999;
@@ -344,7 +411,9 @@ a.page-link:hover {
 }
 
 .comment-card > .card {
-  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: inherit;
+  border-radius: 0px;
 }
 
 .card-body {
@@ -381,6 +450,7 @@ a.page-link:hover {
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 5rem;
+  padding-bottom: 5rem;
   
 }
 
@@ -394,12 +464,13 @@ a.page-link:hover {
 }
 
 .bg-stars {
-  background-image: url(binary.jpg);
+  /*background-image: url(binary.jpg);
   background-position-x: 50%;
   background-position-y: 10%; 
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
+  background-color: rgba(1, 96, 197, 0.8);
 }
 
 .bg-none {

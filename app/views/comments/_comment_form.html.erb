@@ -1,7 +1,8 @@
-<div class="pb-5">
+<div class="mt-5">
+
   <% unless current_user.is_a? GuestUser %>
     <%= form_for @comment, url: '#' do |f| %>
-      <div class="form-group">
+      <div class="form-group pt-3">
         <%= f.label :comment %>
         <%= f.text_area :content, class: 'form-control' %>
       </div>
@@ -10,3 +11,15 @@
     <% end %>
   <% end %>
 </div>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $(".login-comment-btn").hover(function(e){
+      $(this).addClass("btn-on");
+    }, function(e){
+      $(this).removeClass("btn-on");
+    });
+  });
+
+</script>

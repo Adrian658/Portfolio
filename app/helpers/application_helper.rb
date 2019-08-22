@@ -1,11 +1,9 @@
 module ApplicationHelper
   def login_helper style = '', tag_type, tag_type_class
     if current_user.is_a?(GuestUser)
-      link = "<#{tag_type} class='#{tag_type_class}'><a href='/login' class='#{style}'>Login</a></#{tag_type} class='#{tag_type_class}'>"
-      #register_link = "<#{tag_type} class='#{tag_type_class}'><a href='/register' class='#{style}'>Register</a></#{tag_type} class='#{tag_type_class}'>"
-      #(link_to "Register", new_user_registration_path, class: style) +
-      # ".html_safe +
-      #(link_to "Login", new_user_session_path, class: style)
+      login_link = "<#{tag_type} class='#{tag_type_class}'><a href='/login' class='#{style}'>Login</a></#{tag_type} class='#{tag_type_class}'>"
+      register_link = "<#{tag_type} class='#{tag_type_class}'><a href='/register' class='#{style}'>Register</a></#{tag_type} class='#{tag_type_class}'>"
+      link = login_link + register_link
     else
       link = "<#{tag_type} class='#{tag_type_class}'><a href='/logout' class='#{style}' data-method='delete'>Logout</a></#{tag_type} class='#{tag_type_class}'>"
     end
