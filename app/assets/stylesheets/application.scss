@@ -57,8 +57,8 @@ body {
  */
 
 .new-nav {
-  background-color: rgba(49, 49, 49, 0.6);
-  border-bottom: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.8);;
+  border-bottom: 1px solid rgb(255, 255, 255);
   margin-bottom: 2rem;
   //height: 5rem;
   margin-top: 1rem;
@@ -67,22 +67,36 @@ body {
 }
 
 .new-nav .nav-link {
+  //display: none;
   padding: .25rem 0;
   font-weight: 700;
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
+
+  position: relative;
+  top: 0px;
+}
+
+.transition {
+  -webkit-transition: all 200ms ease-in-out; 
+  -moz-transition: all 200ms ease-in-out; 
+  -o-transition: all 200ms ease-in-out; 
+  transition: all 200ms ease-in-out;
 }
 
 .new-nav .nav-link:hover,
 .new-nav .nav-link:focus {
-  border-bottom-color: rgba(245, 109, 69, 0.6);
+  //border-bottom-color: rgba(245, 109, 69, 0.6);
   width: -webkit-max-content;
+
+  top: -7px;
+  color: whitesmoke;
 }
 
 .new-nav .active {
   color: #fff;
-  border-bottom-color: rgba(245, 109, 69, 1);
+  border-bottom-color: rgba(0,123,255, 1);
   width: -webkit-max-content;
 }
 
@@ -214,6 +228,7 @@ button .fas {
 
 .cover-heading {
   font-size: 4rem;
+  display: none;
 }
 
 .tech-heading {
@@ -223,12 +238,23 @@ button .fas {
 }
 
 .about-me-btn {
+  color: whitesmoke;
   margin-top: 20px;
-  background-color: #F56D45;
+  background-color: rgba(0,123,255, 1);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
-.about-me-btn:hover {
-  background-color: rgba(245, 109, 69, 0.74);
+.about-btn-on {
+  background-color: rgba(0,123,255, 0.6);
+  text-decoration: none !important;
+  color: white !important;
 }
 
 .custom-container {
@@ -247,10 +273,6 @@ button .fas {
 .alert {
   height: 50px;
   background-color: rgba(245, 109, 69, 0.4);
-}
-
-.navbar-nav > li > a:active {
-  border-bottom-color: #F56D45;
 }
 
 .about-me-container {
@@ -397,4 +419,9 @@ button .fas {
 
 .text-shadow {
   text-shadow: 2px 1px 3px #6c757d;
+}
+
+.landing-greeting {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
 }

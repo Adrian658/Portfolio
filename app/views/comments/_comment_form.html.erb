@@ -3,7 +3,7 @@
   <% unless current_user.is_a? GuestUser %>
     <%= form_for @comment, url: '#' do |f| %>
       <div class="form-group pt-3">
-        <%= f.text_area :content, class: 'form-control', placeholder: "Any thoughts?" %>
+        <%= f.text_area :content, class: 'form-control', placeholder: "Any thoughts? " %>
       </div>
   
       <%= f.submit 'Post Comment', class: 'btn transition submit-cmt-btn pt-1 pb-1 pl-4 pr-4' %>

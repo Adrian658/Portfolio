@@ -23,8 +23,8 @@
 
     <div class="col-md-12">
 
-        <div class="">
-            <div class="col col-md-4 pr-5 new-sidebar fixed-top bg-none">
+        <div class="row">
+            <div class="col col-md-4 pr-5 new-sidebar bg-none">
                 <%= render 'shared/blog_masthead' %>
               
                 <hr class="hr-divider rounded" align="left" width="25%">
@@ -38,7 +38,10 @@
                 <hr class="hr-divider rounded" align="left" width="25%">
     
                 <%= render 'shared/blog_social_links' %>
-              </div>
+            </div>
+            <div class="col-md-8">
+
+            </div>
           </div>
 
           <div class="row bg-stars">
@@ -48,7 +51,7 @@
               
               <div class="col-md-8 blogs bg-stars"
                 <main role="main" class="container">
-                  <div class="row">
+                  <div class="row bg-test">
                     <div class="col-md-12">
                         <%= yield %>
                     </div>

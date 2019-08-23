@@ -1,13 +1,13 @@
-<nav class="new-nav navbar navbar-expand-xl navbar-dark">
+<nav class="new-nav navbar navbar-expand-xl">
   <a class="navbar-brand" href="/">Adrian Guzman</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-        <%= nav_helper 'Pages', 'slide-page nav-link', 'li', 'nav-item' %>
-        <%= login_helper 'nav-link slide-page', 'li', 'nav-item' %>
-    </ul>
+    <div class="nav-fading navbar-nav ml-auto">
+        <%= nav_helper 'Pages ', 'cust-test nav-link slide-page transition', 'li', 'nav-item' %>
+        <%= login_helper 'cust-test nav-link slide-page transition', 'li', 'nav-item' %>
+    </div>
   </div>
 </nav>

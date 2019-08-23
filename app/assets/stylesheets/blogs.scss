@@ -116,7 +116,7 @@ div > .active {
   font-size: 2rem;
 }
 
-.back-btn > a:hover {
+.back-btn > a:active {
   color: skyblue;
 }
 
@@ -329,7 +329,7 @@ div > .active {
  */
 .blog-post {
   font-size: 1.0rem;
-  color: #999;
+  color: #666;
   border: none;
 }
 
@@ -481,19 +481,24 @@ a.page-link:hover {
 }
 
 .bg-stars {
-  //background-image: url(bg-test.png);
+  background-image: url(finger.jpg);
   //background-position-x: 50%;
   //background-position-y: 10%; 
-  //background-size: cover;
-  //background-attachment: fixed;
-  //background-repeat: no-repeat;
-  background-color: rgba(1, 96, 197, 0.8);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   //height: 5000px;
+}
+
+.bg-test {
+  //background-color: rgba(0, 0, 0, 0.4);
 }
 
 .bg-none {
   background-color: rgba(0, 0, 0, 0.8);
   background-image: none;
+  position: absolute;
+  position: fixed;
 }
 
 .blog-index-title {
@@ -527,4 +532,8 @@ a.page-link:hover {
 
 .author-text {
   font-size: 0.8rem;
+}
+
+.hidden {
+  display: none;
 }

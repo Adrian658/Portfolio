@@ -1,16 +1,50 @@
 <main role="main" class="inner cover home-page">
   <div class="row">
     <div class="col-md-6">
-      <span class="text-shadow">
+      <div class="text-shadow landing-greeting">
         <h1 class="cover-heading">Hello, world!</h1>
-        <p class="lead">This is my personal and professional portfolio</p>
-        <p class="lead">Feel free to navigate around and get to know me</p>
-      </span>
-      <%= link_to "About Me", about_me_path, class: "btn btn-lg about-me-btn" %>
+        <div id="typed-strings">
+            <p class="lead">This is my professional portfolio</p>
+            <p>This is also my personal portfolio</p>
+            <p class="lead">Feel free to navigate around and get to know me</p>
+            <p>01000101 01101110 01101010 01101111 01111001 00100001</p>
+        </div>
+        <span id="typed"></span>
+        <div><%= link_to "About Me", about_me_path, class: "about-me-btn transition" %></div>
+      </div>      
     </div>
     <div class="col-md-6">
 
     </div>
   </div>
 </main>
-<!--  -->
+
+<script>
+  $(document).ready(function(){
+    $(".cover-heading").show("fade", { direction: "up" }, 1000);
+  });
+
+  $( window ).unload(function() {
+   $(".cover-heading").clearQueue();
+   $(".cover-heading-forgot").clearQueue();
+  });
+
+  $(document).ready(function(){
+    $(".about-me-btn").hover(function(e){
+      $(this).addClass("about-btn-on");
+    }, function(e){
+      $(this).removeClass("about-btn-on");
+    });
+  });
+
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 40,
+    backSpeed: 40,
+    backDelay: 4000,
+    loop: true,
+    loopCount: Infinity,
+    contentType: 'html',
+    smartBackspacing: true
+  });
+</script>
