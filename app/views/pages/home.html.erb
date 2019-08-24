@@ -10,7 +10,10 @@
             <p>01000101 01101110 01101010 01101111 01111001 00100001</p>
         </div>
         <span id="typed"></span>
-        <div><%= link_to "About Me", about_me_path, class: "about-me-btn transition" %></div>
+        <div>
+          <%= link_to "Check me out", about_me_path, class: "my-btn transition mr-4 mt-3" %>
+          <%= link_to "Check my portfolio out", portfolios_path, class: "my-btn transition mt-3" %>
+        </div>      
       </div>      
     </div>
     <div class="col-md-6">
@@ -30,10 +33,10 @@
   });
 
   $(document).ready(function(){
-    $(".about-me-btn").hover(function(e){
-      $(this).addClass("about-btn-on");
+    $(".my-btn").hover(function(e){
+      $(this).addClass("my-btn-on btn-size-sm");
     }, function(e){
-      $(this).removeClass("about-btn-on");
+      $(this).removeClass("my-btn-on btn-size-sm");
     });
   });
 

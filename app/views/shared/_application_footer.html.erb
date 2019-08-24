@@ -1,6 +1,34 @@
-<footer class="mastfoot">
-  <hr class="bottom-hr">
-  <div class="inner">
-    <p class="app-footer"><%= copyright_generator %></p>
-  </div>
+<footer class="mastfoot mt-5 mb-4">
+    <hr class="bottom-hr">
+    <div class="inner pt-3">
+      <p class="app-footer"><%= copyright_generator %></p>
+    </div>
 </footer>
+
+<% if root_path == request.env['PATH_INFO'] %>
+  <script type="text/javascript">
+  $(".mastfoot").addClass("fixed-bottom");
+  </script>
+<% end %>
+
+<% if not ([root_path, about_me_path, contact_path, tech_news_path].include? session[:previous_request_url]) %>
+  <script type="text/javascript">
+    var ani_time = 2400
+    $(document).ready(function(){
+      window.setTimeout(function(){
+        $(".bottom-hr").hide().css('visibility','visible');
+      $(".bottom-hr").show("blind", {direction: "left"}, ani_time);
+        $(".app-footer").hide().css('visibility','visible');
+        $(".app-footer").show("slide", {direction: "down"}, ani_time);
+        
+      }, ani_time);
+    });
+  </script>
+<% else %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".bottom-hr").css('visibility','visible');
+      $(".app-footer").css('visibility','visible');
+    });
+  </script>
+<% end %>

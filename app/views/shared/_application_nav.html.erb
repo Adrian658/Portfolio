@@ -1,13 +1,39 @@
-<nav class="new-nav navbar navbar-expand-xl">
-  <a class="navbar-brand" href="/">Adrian Guzman</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="pb-2">
+    <nav class="new-nav navbar navbar-expand-xl">
+        <a class="navbar-brand" href="/">Adrian Guzman</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="nav-fading navbar-nav ml-auto">
+              <%= nav_helper 'Pages ', 'cust-test nav-link slide-page transition', 'li', 'nav-item' %>
+              <%= login_helper 'cust-test nav-link slide-page transition', 'li', 'nav-item' %>
+          </div>
+        </div>
+      </nav>
+      <hr class="top-hr">
+</div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="nav-fading navbar-nav ml-auto">
-        <%= nav_helper 'Pages ', 'cust-test nav-link slide-page transition', 'li', 'nav-item' %>
-        <%= login_helper 'cust-test nav-link slide-page transition', 'li', 'nav-item' %>
-    </div>
-  </div>
-</nav>
+<% puts [root_path, about_me_path, contact_path, tech_news_path] %>
+<% puts session[:previous_request_url]; puts session[:current_request_url] %>
+<% if not([root_path, about_me_path, contact_path, tech_news_path].include? session[:previous_request_url]) %>
+    <script type="text/javascript">
+    var ani_time = 2400;
+      $(document).ready(function(){
+        window.setTimeout(function(){
+          $(".top-hr").hide().css('visibility','visible');
+          $(".top-hr").show("blind", {direction: "right"}, ani_time);
+          $(".new-nav").hide().css('visibility','visible');
+          $(".new-nav").show("slide", {direction: "up"}, ani_time);
+        }, ani_time);
+      });
+    </script>
+<% else %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".top-hr").css('visibility','visible');
+      $(".new-nav").css('visibility','visible');
+    });
+  </script>
+<% end %>

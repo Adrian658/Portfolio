@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+  before_action :set_session_pages
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   before_action :set_sidebar_topics, except: [:update, :create, :destroy, :toggle_status]
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
@@ -100,4 +101,9 @@ class BlogsController < ApplicationController
     def set_sidebar_topics
       @side_bar_topics = Topic.with_blogs
     end
+
+    def set_session_pages
+      session[:first_visit_pages] = 2
+    end
+
 end

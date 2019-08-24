@@ -1,7 +1,14 @@
 class PagesController < ApplicationController
+  before_action :set_session_pages
+
   def home
   	@blogs = Blog.all
-  	@skills = Skill.all
+    @skills = Skill.all
+    if session.has_key?(:first_visit)
+      session[:first_visit] = false
+    else
+      session[:first_visit] = true
+    end
   end
 
   def about
@@ -30,4 +37,15 @@ class PagesController < ApplicationController
       type: "application/pdf"
     )
   end
+
+  private
+
+  def set_session_pages
+    if session.has_key?(:first_visit_pages)
+      ###
+    else
+      session[:first_visit_pages] = 1
+    end
+  end
+
 end

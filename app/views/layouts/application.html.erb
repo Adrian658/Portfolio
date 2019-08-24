@@ -25,14 +25,14 @@
 
     <%= image_tag "binary.jpg", id: 'background' %>
 
-  <div class="row custom-container">
+  <div class="row main-row">
     <div class="col-md-12">
       <% if source_helper("application") %>
         <%= source_helper('alert alert-dismissible fade show') %>
       <% end %>
       <%= render "shared/application_nav" %>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 custom-container">
       <%= yield %>
     </div>
     <div class="col-md-12">

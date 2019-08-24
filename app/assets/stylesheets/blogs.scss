@@ -151,12 +151,12 @@ div > .active {
 }
 
 .transition {
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
+  -o-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   /* ...and now for the proper property */
-  transition:0.5s;
+  transition: all 200ms ease-in-out;
 }
 
 .blog-container {
@@ -481,13 +481,14 @@ a.page-link:hover {
 }
 
 .bg-stars {
-  background-image: url(finger.jpg);
+  //background-image: url(finger.jpg);
   //background-position-x: 50%;
   //background-position-y: 10%; 
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  //background-size: cover;
+  //background-attachment: fixed;
+  //background-repeat: no-repeat;
   //height: 5000px;
+  background-color: rgb(0, 67, 138);
 }
 
 .bg-test {
@@ -495,7 +496,7 @@ a.page-link:hover {
 }
 
 .bg-none {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 1);
   background-image: none;
   position: absolute;
   position: fixed;

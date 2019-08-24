@@ -1,6 +1,40 @@
-<div class="row">
-  <div class="col-md-12">
-      <div class="jumbotron jumbo-about">
+<div class="row pt-5">
+  <div class="col-md-12 pt-5">
+    <div class="about-me-statement pl-5 pr-5 pt-4 pb-4">
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag "ProfilePic.JPG", class: 'profile-pic' %>
+        </div>
+        <div class="col-md-5">
+          <div class="about-me-header">
+            <div id="about-me">About Me</div>
+            <div class="buttons">
+                <%= link_to 'Resume', pages_download_resume_url, class: "my-btn transition" %>
+                <%= link_to 'Transcript', pages_download_transcript_url, class: "my-btn transition" %>
+            </div>
+          </div>
+          <hr class="about-me-hr mt-0" align="left" width="100%">
+          <p>I am currently a fourth year Computer Science major at
+            <a href="https://case.edu" id="CWRU-link">Case Western Reserve University</a>.
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <% @skills.each do |skill| %>
+            <div class="skill transition">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div class="progress-bar progress-bar-animated progress-bar-striped bg-custom" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 pt-5">
+      <div class="jumbo-about p-5">
         <h2>What I&apos;m up to right now</h2>
         <p>Continuing to develop and improve on this portfolio website</p>
         <hr class="about-me-hr-jumbo" align="left" width="70px">
@@ -9,60 +43,32 @@
       </div>
   </div>
 </div>
-<div class="inner cover cover-about about-me-container">
-  <div class="row">
-    <div class="col-md-4 profile-pic-bgd">
-      <%= image_tag "ProfilePic.JPG", class: 'profile-pic' %>
-    </div>
-    <div class="col-md-8">
-      <div class="about-me-statement">
-        <div class="row">
-          <div class="col-md-7">
-            <h1 id="">About Me</h1>
-            <hr class="about-me-hr" align="left" width="25%">
-            <p>I am currently a third year Computer Science major at
-              <a href="https://case.edu" id="CWRU-link">Case Western Reserve University</a>.
-              
-            </p>
-            <div class="buttons">
-              <%= link_to 'Resume', pages_download_resume_url, class: "btn doc-button doc-button-left" %>
-              <%= link_to 'Transcript', pages_download_transcript_url, class: "btn doc-button" %>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <% @skills.each do |skill| %>
-              <div class="skill">
-                <h4><%= skill.title %></h4>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-animated progress-bar-striped bg-custom" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- <div class="row hobbies">
-  <div class="col-md-12">
-    <h1>Hobbies</h1>
-  </div>
-  <div class="col-md-12">
-    <div class="row">
-      <div class="col-md-6">
-        Snowboarding
-      </div>
-      <div class="col-md-6">
-        img here
-      </div>
-      <div class="col-md-6">
-        img here
-      </div>
-      <div class="col-md-6">
-        Photography
-      </div>
-    </div>
-  </div>
-</div> -->
+<script>
+
+  function slide_hr() {
+    $(".about-me-hr").hide();
+    $(".about-me-hr").show("slide", {direction: "left"}, 2000);
+  }
+
+  function slide_buttons() {
+    //$("#about-me").css("top", "40px");
+    $(".buttons").hide().css("visibility", "visible");
+    $(".buttons").delay(800).show("fade", {direction: "down"}, 1000);
+  }
+
+  function button_hover() {
+    $(".my-btn").hover(function(e){
+      $(this).addClass("my-btn-on btn-size-md");
+    }, function(e){
+      $(this).removeClass("my-btn-on btn-size-md");
+    });
+  }
+
+  $(document).ready(function(){
+    slide_hr();
+    slide_buttons();
+    button_hover();
+  });
+
+</script>
