@@ -4,11 +4,6 @@ class PagesController < ApplicationController
   def home
   	@blogs = Blog.all
     @skills = Skill.all
-    if session.has_key?(:first_visit)
-      session[:first_visit] = false
-    else
-      session[:first_visit] = true
-    end
   end
 
   def about

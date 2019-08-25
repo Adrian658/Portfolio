@@ -5,22 +5,14 @@
 
     <%= source_helper('alert alert-info alert-dismissible fade show') %>
 
-    <div class="alert alert-dark alert-dismissible fade show" role="alert">
-      Try moving us around!
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-
-    <script type="text/javascript">
-      $(document).ready(function () {
-        window.setTimeout(function() {
-            $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
-                $(this).remove(); 
-            });
-        }, 4000);
-      });
-    </script>
+    <% if session[:first_visit_portfolio] <= 2 %>
+      <div class="alert alert-dark alert-dismissible fade show" role="alert">
+        Try moving us around!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
 
     <div class="row sortable">
 

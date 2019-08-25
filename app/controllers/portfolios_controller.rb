@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+	before_action :set_first_visit
 	before_action :set_session_pages
 	before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
 	access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
@@ -74,6 +75,18 @@ class PortfoliosController < ApplicationController
 
 		def set_session_pages
       session[:first_visit_pages] = 2
-    end
+		end
+		
+		def set_first_visit
+			if session.has_key?(:first_visit_portfolio)
+				if session[:first_visit_portfolio] == 1
+					session[:first_visit_portfolio] = 2
+				else
+					session[:first_visit_portfolio] = 3
+				end
+			else
+				session[:first_visit_portfolio] = 1
+			end
+		end
 
 end

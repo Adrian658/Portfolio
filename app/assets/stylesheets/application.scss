@@ -81,7 +81,7 @@ body {
   border-bottom: .25rem solid transparent;
 
   position: relative;
-  top: 0px;
+  left: 0px;
 }
 
 .transition {
@@ -96,7 +96,7 @@ body {
   //border-bottom-color: rgba(245, 109, 69, 0.6);
   width: -webkit-max-content;
 
-  //top: -4px;
+  left: -4px;
   color: whitesmoke;
   //border-bottom-color: skyblue;
 }
@@ -284,7 +284,7 @@ button .fas {
 }
 
 .my-btn-on {
-  background-color: whitesmoke;
+  background-color: white;
   text-decoration: none !important;
   color: black !important;
 }
@@ -318,10 +318,6 @@ button .fas {
   background-color: rgba(245, 109, 69, 0.4);
 }
 
-.about-me-container {
-  font-family: 'Raleway', sans-serif;
-}
-
 .about-me-hr {
   visibility: hidden;
   background-color: rgba(0,123,255, 1);
@@ -352,6 +348,32 @@ button .fas {
 .about-me-header {
   margin-top: 20px;
   width: 100%;
+  display: inline-flex;
+}
+
+#about-nav {
+  display: inline-flex;
+}
+
+#about-nav-container {
+  margin: auto;
+}
+
+#about-professional {
+  position: relative;
+  left: 0;
+  transition: all 2s ease-in-out;
+  opacity: 1;
+}
+
+#about-personal {
+  position: relative;
+  left: 0;
+  transition: all 2s ease-in-out;
+  opacity: 0;
+}
+
+.about-me-container {
   display: inline-flex;
 }
 
@@ -388,6 +410,21 @@ button .fas {
   //padding-bottom: 10px;
   width: 100%;
   height: 100%;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+  //bottom: 40px;
+  //height: 321px;
 }
 
 #CWRU-link {

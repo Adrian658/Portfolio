@@ -1,0 +1,47 @@
+<div id="about-personal" class="col-md-12 pt-5">
+    <div class="about-me-statement pl-5 pr-5 pt-4 pb-4">
+        <div class="row">
+
+        <div class="col-md-4">
+            <div id="cf">
+                <%= image_tag "IMG_3205.jpeg", class: 'profile-pic bottom' %>
+                <%= image_tag "IMG_3632.jpeg", class: 'profile-pic top' %>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="about-me-header">
+            <div id="about-me">Personal</div>
+            <div class="buttons">
+                <%= link_to 'Resume', pages_download_resume_url, class: "my-btn transition" %>
+                <%= link_to 'Transcript', pages_download_transcript_url, class: "my-btn transition" %>
+            </div>
+            </div>
+            <hr class="about-me-hr mt-0" align="left" width="100%">
+            <p>I am currently a fourth year Computer Science major at <a href="https://case.edu" id="CWRU-link">Case Western Reserve University</a>, with a concentration in 'Databases and Data Mining'.
+            I entered CWRU intending to pursue chemical engineering, but after taking an introductory programming course taught in MATLAB, I was immediatly hooked and changed my major to CS.
+            I really enjoy the creative freedom that programming offers, and the unique blend of science and art into a single field of study.
+            I am excited to finish school and contribute to real world applications, but also to continue my education beyond the classroom.
+            Check out some projects I have worked on <%= link_to 'here', portfolios_path, id: "CWRU-link" %>!
+            <!-- 
+            <i class="fas fa-chess"></i>
+            <i class="fas fa-camera-retro"></i>
+            <i class="fas fa-couch"></i>
+            -->
+            </p>
+        </div>
+
+        <div class="col-md-3">
+            <% @skills.each do |skill| %>
+            <div class="skill transition">
+                <h4><%= skill.title %></h4>
+                <div class="progress">
+                <div class="progress-bar progress-bar-animated progress-bar-striped bg-custom" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+
+        </div>
+    </div>
+</div>

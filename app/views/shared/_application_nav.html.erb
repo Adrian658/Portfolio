@@ -15,8 +15,6 @@
       <hr class="top-hr">
 </div>
 
-<% puts [root_path, about_me_path, contact_path, tech_news_path] %>
-<% puts session[:previous_request_url]; puts session[:current_request_url] %>
 <% if not([root_path, about_me_path, contact_path, tech_news_path].include? session[:previous_request_url]) %>
     <script type="text/javascript">
     var ani_time = 2400;
