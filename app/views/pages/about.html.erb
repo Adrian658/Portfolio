@@ -2,14 +2,15 @@
 
   <div class="col-md-12">
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6" id="about-nav">
+      <div class="col-md-2"></div>
+      <div class="col-md-8" id="about-nav">
         <div id="about-nav-container">
-          <div id="professional-btn" class="my-btn transition">Professional</div>
-          <div id="personal-btn" class="my-btn transition">Personal</div>
+          <div id="professional-btn" class="">Professional</div>
+          <div id="personal-btn" class="">Personal</div>
         </div>
+        <hr id="about-nav-hr" class="transition-slow">
       </div>
-      <div class="col-md-3"></div>
+      <div class="col-md-2"></div>
     </div>
   </div>
 
@@ -33,15 +34,14 @@
 
 <script>
 
-  function slide_hr() {
-    $(".about-me-hr").hide().css("visibility", "visible");
-    $(".about-me-hr").show("slide", {direction: "left"}, 2000);
+  function slide_hr(hr) {
+    $(hr).hide().css("visibility", "visible");
+    $(hr).show("slide", {direction: "left"}, 2000);
   }
 
-  function slide_buttons() {
-    //$("#about-me").css("top", "40px");
-    $(".buttons").hide().css("visibility", "visible");
-    $(".buttons").delay(800).show("fade", {direction: "down"}, 1000);
+  function fade_buttons(buttons) {
+    $(buttons).hide().css("visibility", "visible");
+    $(buttons).delay(800).show("fade", {direction: "down"}, 1000);
   }
 
   function button_hover() {
@@ -54,18 +54,24 @@
 
   function transition_about() {
     $("#personal-btn").on("click", function(e){
+      $('#about-nav-hr').css("left", "86%").css("width", "14%");
       $("#about-professional").css("left", "-100%").css("opacity", "0");
       $("#about-personal").css("left", "-100%").css("opacity", "1");
+      slide_hr("#personal-hr");
+      fade_buttons("#personal-buttons");
     });
     $("#professional-btn").on("click", function(e){
+      $('#about-nav-hr').css("left", "0").css("width", "19%");
       $("#about-professional").css("opacity", "1").css("left", "0");
       $("#about-personal").css("opacity", "0").css("left", "0");
+      slide_hr("#professional-hr");
+      fade_buttons("#professional-buttons");
     });
   }
 
   $(document).ready(function(){
-    slide_hr();
-    slide_buttons();
+    slide_hr("#professional-hr");
+    fade_buttons("#professional-buttons");
     button_hover();
     transition_about();
   });

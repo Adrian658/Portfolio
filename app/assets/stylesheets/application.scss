@@ -91,6 +91,13 @@ body {
   transition: all 500ms ease-in-out;
 }
 
+.transition-slow {
+  -webkit-transition: all 1000ms ease-in-out; 
+  -moz-transition: all 1000ms ease-in-out; 
+  -o-transition: all 1000ms ease-in-out; 
+  transition: all 1000ms ease-in-out;
+}
+
 .new-nav .nav-link:hover,
 .new-nav .nav-link:focus, {
   //border-bottom-color: rgba(245, 109, 69, 0.6);
@@ -351,25 +358,37 @@ button .fas {
   display: inline-flex;
 }
 
-#about-nav {
-  display: inline-flex;
+#about-nav-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-#about-nav-container {
-  margin: auto;
+#professional-btn, #personal-btn {
+  cursor: pointer;
+  font-size: 1.8em;
+}
+
+#about-nav-hr {
+  margin-top: 0px;
+  width: 19%;
+  height: 4px;
+  background-color: rgba(0,123,255, 1);
+  position: relative;
+  left: 0;
+  margin: 0 auto 0 0;
 }
 
 #about-professional {
   position: relative;
   left: 0;
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 1;
 }
 
 #about-personal {
   position: relative;
   left: 0;
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 0;
 }
 
