@@ -1,8 +1,8 @@
 <div class="border-left-blue">
   <ul class="list-unstyled">
-    <%= nav_helper 'Blog', 'blog-nav transition', 'div', 'pb-1 scroll-out' %>
+    <%= nav_helper 'Blog', 'blog-nav transition scroll-out', 'div', 'pb-1' %>
     <div class="pt-3"></div>
-    <%= login_helper 'blog-nav', 'div', 'scroll-out' %>
+    <%= login_helper 'blog-nav transition scroll-out', 'div', 'pb-1' %>
   </ul>
 </div>
 
@@ -10,7 +10,7 @@
   $(document).ready(function(){
     $(".scroll-out").on('click',function(e){
         //e.preventDefault();
-        $(this).hide("slide", { direction: "right" }, 600);
+        $(this).hide("explode", { direction: "left" }, 600);
     });
     });
 </script>

@@ -14,12 +14,13 @@
     </div>
   </div>
 
-  <div class="about-me-container">
+  <div class="about-me-container mb-5">
       <%= render 'about_me_professional' %>
 
       <%= render 'about_me_personal' %>
   </div>
 
+  <!--
   <div class="col-md-12 pt-5">
       <div class="jumbo-about p-5">
         <h2>What I&apos;m up to right now</h2>
@@ -29,6 +30,7 @@
         <hr class="about-me-hr-jumbo" align="left" width="70px">
       </div>
   </div>
+  -->
 </div>
 
 
@@ -59,6 +61,7 @@
       $("#about-personal").css("left", "-100%").css("opacity", "1");
       slide_hr("#personal-hr");
       fade_buttons("#personal-buttons");
+      slide_progress_bars("progress-personal", "progress-professional");
     });
     $("#professional-btn").on("click", function(e){
       $('#about-nav-hr').css("left", "0").css("width", "19%");
@@ -66,7 +69,20 @@
       $("#about-personal").css("opacity", "0").css("left", "0");
       slide_hr("#professional-hr");
       fade_buttons("#professional-buttons");
+      slide_progress_bars("progress-professional", "progress-personal");
     });
+  }
+
+  function slide_progress_bars(fill, empty) {
+    "<% @skills.each do |skill| %>"
+      var skill_select = $(".<%= skill.id %>");
+      if (skill_select.hasClass(fill)) {
+        skill_select.css("width", "<%= skill.percent_utilized %>%");
+      }
+      else {
+        skill_select.css("width", "0%");
+      }
+    "<% end %>"
   }
 
   $(document).ready(function(){
@@ -74,6 +90,7 @@
     fade_buttons("#professional-buttons");
     button_hover();
     transition_about();
+    slide_progress_bars("progress-professional", "progress-personal");
   });
 
 </script>

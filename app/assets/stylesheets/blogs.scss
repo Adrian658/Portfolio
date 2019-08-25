@@ -240,6 +240,15 @@ div > .active {
   text-decoration: none;
 }
 
+.scroll-out {
+  position: relative;
+  left: 0;
+}
+
+.scroll-out:hover {
+  left: 4px;
+}
+
 .submit-cmt-btn {
   background-color: rgba(0,123,255, 0.9);
   color: whitesmoke;

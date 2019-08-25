@@ -98,6 +98,13 @@ body {
   transition: all 1000ms ease-in-out;
 }
 
+.transition-super-slow {
+  -webkit-transition: all 2000ms ease-in-out; 
+  -moz-transition: all 2000ms ease-in-out; 
+  -o-transition: all 2000ms ease-in-out; 
+  transition: all 2000ms ease-in-out;
+}
+
 .new-nav .nav-link:hover,
 .new-nav .nav-link:focus, {
   //border-bottom-color: rgba(245, 109, 69, 0.6);
@@ -359,11 +366,13 @@ button .fas {
 }
 
 #about-nav-container {
+  //background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: space-between;
 }
 
 #professional-btn, #personal-btn {
+  text-shadow: 4px 2px 3px rgb(25, 25, 26);
   cursor: pointer;
   font-size: 1.8em;
 }
@@ -376,6 +385,7 @@ button .fas {
   position: relative;
   left: 0;
   margin: 0 auto 0 0;
+  //box-shadow: 3px 4px 3px 0px rgb(62, 62, 65);
 }
 
 #about-professional {

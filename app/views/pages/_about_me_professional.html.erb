@@ -30,15 +30,20 @@
 
         <div class="col-md-3">
             <% @skills.each do |skill| %>
-            <div class="skill transition">
-                <h4><%= skill.title %></h4>
-                <div class="progress">
-                <div class="progress-bar progress-bar-animated progress-bar-striped bg-custom" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"></div>
-                </div>
-            </div>
+                <% if skill.category == "professional" %>
+                    <div class="skill transition">
+                        <h4><%= skill.title %></h4>
+                        <div class="progress">
+                        <div class="progress-bar progress-bar-animated progress-bar-striped progress-professional <%= skill.id %> bg-custom transition-super-slow" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemax="100" style="width: 0"></div>
+                        </div>
+                    </div>
+                <% end %>
             <% end %>
         </div>
 
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+</script>
