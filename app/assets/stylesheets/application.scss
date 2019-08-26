@@ -299,6 +299,9 @@ button .fas {
 
 .my-btn-on {
   background-color: white;
+}
+
+.my-btn-on > a, .my-btn-on > i {
   text-decoration: none !important;
   color: black !important;
 }
@@ -375,6 +378,20 @@ button .fas {
   text-shadow: 4px 2px 3px rgb(25, 25, 26);
   cursor: pointer;
   font-size: 1.8em;
+  color: white;
+
+  //-webkit-animation: glow 2s ease-in-out infinite alternate;
+  //-moz-animation: glow 2s ease-in-out infinite alternate;
+  //animation: glow 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white;
+  }
 }
 
 #about-nav-hr {

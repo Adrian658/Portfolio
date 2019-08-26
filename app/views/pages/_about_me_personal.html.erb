@@ -12,17 +12,16 @@
         <div class="col-md-5">
             <div class="about-me-header">
             <div id="about-me">About Me</div>
-            <!-- <div id="personal-buttons" class="buttons">
-                <%= link_to 'Resume', pages_download_resume_url, class: "my-btn transition" %>
-                <%= link_to 'Transcript', pages_download_transcript_url, class: "my-btn transition" %>
-            </div> -->
+            <div id="personal-buttons" class="buttons">
+                <div class="my-btn transition"><%= link_to 'Travel Blog', topic_path(:id => Topic.where(title: "Travel").first.id), class: "" %></div>
+            </div>
             </div>
             <hr id="personal-hr" class="about-me-hr mt-0" align="left" width="100%">
-            <p>I am currently a fourth year Computer Science major at <a href="https://case.edu" id="CWRU-link">Case Western Reserve University</a>, with a concentration in 'Databases and Data Mining'.
-            I entered CWRU intending to pursue chemical engineering, but after taking an introductory programming course taught in MATLAB, I was immediatly hooked and changed my major to CS.
-            I really enjoy the creative freedom that programming offers, and the unique blend of science and art into a single field of study.
-            I am excited to finish school and contribute to real world applications, but also to continue my education beyond the classroom.
-            Check out some projects I have worked on <%= link_to 'here', portfolios_path, id: "CWRU-link" %>!
+            <p>
+            I was born and raised in the Bay Area of California, more specifically in Lafayette, CA, by my parents, who are from Arizona and Mexico.
+            My chilhood consisted primarily of legos, beans, soccer, lincoln logs, making youtube videos, hiking with my mom, chicken soup, and watching miyazaki films with hot chocolate when it was raining.
+            I now attend Case Western Reserve University as a Computer Science major, which I really enjoy.
+            After I graduate, I have no plans yet, but I'd like to travel outside of the US and enjoy my freedom while I can.
             <!-- 
             <i class="fas fa-chess"></i>
             <i class="fas fa-camera-retro"></i>
