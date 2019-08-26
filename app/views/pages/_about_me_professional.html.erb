@@ -8,7 +8,7 @@
 
         <div class="col-md-5">
             <div class="about-me-header">
-            <div id="about-me">Professional</div>
+            <div id="about-me">About Me</div>
             <div id="professional-buttons" class="buttons">
                 <%= link_to 'Resume', pages_download_resume_url, class: "my-btn transition" %>
                 <%= link_to 'Transcript', pages_download_transcript_url, class: "my-btn transition" %>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="col-md-3">
-            <% @skills.each do |skill| %>
+            <% sort_skills(@skills).each do |skill| %>
                 <% if skill.category == "professional" %>
                     <div class="skill transition">
                         <h4><%= skill.title %></h4>

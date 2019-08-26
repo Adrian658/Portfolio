@@ -4,18 +4,18 @@
 
         <div class="col-md-4">
             <div id="cf">
-                <%= image_tag "IMG_3205.jpeg", class: 'profile-pic bottom' %>
-                <%= image_tag "IMG_3632.jpeg", class: 'profile-pic top' %>
+                <%= image_tag "IMG_3632.jpeg", class: 'profile-pic bottom' %>
+                <%= image_tag "IMG_3205.jpeg", class: 'profile-pic top' %>
             </div>
         </div>
 
         <div class="col-md-5">
             <div class="about-me-header">
-            <div id="about-me">Personal</div>
-            <div id="personal-buttons" class="buttons">
+            <div id="about-me">About Me</div>
+            <!-- <div id="personal-buttons" class="buttons">
                 <%= link_to 'Resume', pages_download_resume_url, class: "my-btn transition" %>
                 <%= link_to 'Transcript', pages_download_transcript_url, class: "my-btn transition" %>
-            </div>
+            </div> -->
             </div>
             <hr id="personal-hr" class="about-me-hr mt-0" align="left" width="100%">
             <p>I am currently a fourth year Computer Science major at <a href="https://case.edu" id="CWRU-link">Case Western Reserve University</a>, with a concentration in 'Databases and Data Mining'.
@@ -32,7 +32,7 @@
         </div>
 
         <div class="col-md-3">
-            <% @skills.each do |skill| %>
+            <% sort_skills(@skills).each do |skill| %>
                 <% if skill.category == "personal" %>
                     <div class="skill transition">
                         <h4><%= skill.title %></h4>

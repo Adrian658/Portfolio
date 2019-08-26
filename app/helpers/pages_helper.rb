@@ -26,4 +26,8 @@ module PagesHelper
 
   end
 
+  def sort_skills skills
+    skills.sort_by{ |skill| -skill.percent_utilized  }
+  end
+
 end

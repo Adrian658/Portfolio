@@ -5,12 +5,3 @@
     <%= login_helper 'blog-nav transition scroll-out', 'div', 'pb-1' %>
   </ul>
 </div>
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(".scroll-out").on('click',function(e){
-        //e.preventDefault();
-        $(this).hide("explode", { direction: "left" }, 600);
-    });
-    });
-</script>
