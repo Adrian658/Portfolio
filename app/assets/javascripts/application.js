@@ -19,7 +19,5 @@
 //= require cocoon
 //= require gritter
 //= require cable
-//= require typed/src/typed
-//= require turbolinks
 //= require_tree .
 
