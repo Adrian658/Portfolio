@@ -54,6 +54,11 @@
     });
   }
 
+  function prof_pers_in() {
+    $("#professional-btn").hide().show("puff", {direction: "down"}, 2000);
+    $("#personal-btn").hide().show("puff", {direction: "down"}, 2000);
+  }
+
   function transition_about() {
     $("#personal-btn").on("click", function(e){
       $('#about-nav-hr').css("left", "86%").css("width", "14%");
@@ -91,6 +96,7 @@
     button_hover();
     transition_about();
     slide_progress_bars("progress-professional", "progress-personal");
+    prof_pers_in();
   });
 
 </script>

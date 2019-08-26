@@ -10,7 +10,10 @@ class ApplicationController < ActionController::Base
     if session[:current_request_url] != request.env['PATH_INFO']
       session[:previous_request_url] = session[:current_request_url]
       session[:current_request_url] = request.env['PATH_INFO']
+      session[:load_count] = false
+    else
+      session[:load_count] = true
     end
   end
-  
+
 end
