@@ -1,4 +1,4 @@
-<div class="jumbo-contact jumbotron">
+<div class="jumbo-contact">
 
   <div class="container contact-body">
     <h1>Contact Me</h1>
@@ -9,24 +9,24 @@
       </div>
       <div class="col-md-5">
         <div class="row">
-          <div class="col-md-11 col-custom">
+          <div class="col-md-11 col-custom transition">
             <div class="home-address">
               <h3>Home Address</h3>
-              <p>1024 Carol Lane, Lafayette, CA</p>
+              <p>2414 San Juan Drive, Austin, TX</p>
             </div>
           </div>
           <div class="col-md-1 "></div>
-          <div class="col-md-9 col-custom">
+          <div class="col-md-9 col-custom transition">
             <h3>School Address</h3>
-            <p>1611 E 115th St, Cleveland, OH</p>
+            <p>11477 Mayfield Rd #618, Cleveland, OH</p>
           </div>
           <div class="col-md-3"></div>
-          <div class="col-md-7 col-custom">
+          <div class="col-md-7 col-custom transition">
             <h3>Phone</h3>
             <p>925-360-2201</p>
           </div>
           <div class="col-md-5"></div>
-          <div class="col-md-5 col-custom">
+          <div class="col-md-5 col-custom transition" id="lets-connect">
             <h3>Email</h3>
             <p><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=afg30@case.edu&subject=&body=" target="_blank">Lets Connect!</a></p>
           </div>
@@ -34,9 +34,39 @@
         </div>
       </div>
       <div class="col-md-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.13994799984!2d-81.60535028493689!3d41.50124197925394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830fc787dfe1b8d%3A0x94347df34387b843!2s2345+Murray+Hill+Rd+%23230d%2C+Cleveland%2C+OH+44106!5e0!3m2!1sen!2sus!4v1520107947708" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://maps.google.com/maps?q=11477%20Mayfield%20Rd%20%23618%2C%20Cleveland%2C%20OH&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
 </div>
+
+<script>
+  function connect_bounce() {
+    $("#lets-connect").animate({left: "-=80"}, 100);
+    $("#lets-connect").delay(450).animate({left: "20"}, 100);
+    $("#lets-connect").delay(500).animate({left: "0"}, 20);
+  }
+
+  function connect_timer() {
+    var timerRef;
+      clearInterval(timerRef);
+      timerRef = window.setInterval(function(){
+        connect_bounce();
+    },5000)
+  }
+
+  function row_hover() {
+    $(".col-custom").hover(function(){
+      $(this).css("left", "-20px");
+    }, function(){
+      $(this).css("left", "0");
+    })
+  }
+
+  $(document).ready(function(){
+    connect_bounce();
+    connect_timer();
+    row_hover();
+  })
+</script>

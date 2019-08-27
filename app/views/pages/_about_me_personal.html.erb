@@ -4,11 +4,11 @@
 
         <div class="col-md-5">
             <div class="personal-images">
-                <%= image_tag "IMG_3205.jpeg", class: 'profile-pic img-visible first-img' %>
-                <%= image_tag "IMG_3632.jpeg", class: 'profile-pic img-hidden' %>
-                <%= image_tag "IMG_3481.jpeg", class: 'profile-pic img-hidden' %>
-                <%= image_tag "IMG_8446.JPG", class: 'profile-pic img-hidden' %>
-                <%= image_tag "IMG_3587.JPG", class: 'profile-pic img-hidden last-img' %>
+                <%= image_tag "IMG_3205.jpeg", class: 'profile-pic transition-slow img-visible first-img' %>
+                <%= image_tag "IMG_3632.jpeg", class: 'profile-pic transition-slow img-hidden' %>
+                <%= image_tag "IMG_3481.jpeg", class: 'profile-pic transition-slow img-hidden' %>
+                <%= image_tag "IMG_8446.JPG", class: 'profile-pic transition-slow img-hidden' %>
+                <%= image_tag "IMG_3587.JPG", class: 'profile-pic transition-slow img-hidden last-img' %>
             </div>
         </div>
 
@@ -51,7 +51,7 @@
 </div>
 
 <script>
-    function change_img(fade_time){
+    function change_img(){
         var displayed = $( ".img-visible");
         if (displayed == null) {
             displayed = $(".first-img");
@@ -68,15 +68,11 @@
         $(next_displayed).removeClass("img-hidden").addClass("img-visible");
     }
 
-    //timerRef = window.setInterval(function(){
-        /// call your function here
-    //      random_no();
-    //}, 3000);
     $(document).ready(function(){
         var timerRef;
         clearInterval(timerRef);
         timerRef = window.setInterval(function(){
-            change_img(1000);
-        },4000)
+            change_img();
+        },6000)
     })
 </script>
