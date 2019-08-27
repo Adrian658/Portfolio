@@ -1,10 +1,17 @@
 <main role="main" class="inner cover">
-  <h1 class="tech-heading">Tech News: Ruby on Rails</h1>
-  <%= form_with do %>
-    <%= label_tag(:q, "Search for:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-  <% end %>
+  <div class="row tech-heading">
+    <div id="tech-title-container" class="col-md-8">
+      <div class="tech-title">Twitter News: <%= session[:twitter_search_term] %></div>
+    </div>
+    <div class="col-md-4 twitter-search-container">
+      <div class="twitter-search">
+          <%= form_tag(tech_news_path, :method => "get") do %>
+          <%= text_field_tag :twitter_search, '', placeholder: "Pick a cool topic", class: "twitter-search-field" %>
+          <%= submit_tag 'Search', class: "twitter-search-btn transition" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <% @tweets.each do |tweet| %>
       <div class="col-md-6">

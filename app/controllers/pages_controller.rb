@@ -14,7 +14,14 @@ class PagesController < ApplicationController
   end
 
   def tech_news
-    @tweets = SocialTool.twitter_search('#neymar')
+    begin
+      search_term = ("#" + params[:twitter_search]).gsub(/\s+/, "")
+      session[:twitter_search_term] = search_term
+    rescue
+      search_term = "#neymar"
+      session[:twitter_search_term] = search_term
+    end
+    @tweets = SocialTool.twitter_search(search_term)
   end
 
   def download_resume

@@ -278,10 +278,28 @@ button .fas {
   display: none;
 }
 
-.tech-heading {
-  font-size: 4rem;
+.tech-title {
+  text-align: center;
+  font-size: 3rem;
   padding-top: 30px;
   font-family: 'Raleway', sans-serif;
+  text-shadow: 4px 2px 3px rgb(25, 25, 26);
+}
+
+.tech-heading {
+
+}
+
+.twitter-search-container {
+  position: relative;
+  display: inline;
+}
+
+.twitter-search {
+  position: absolute;
+  padding-bottom: 2.5%;
+  left: 0em;
+  bottom: 0;
 }
 
 .my-btn {
@@ -295,6 +313,26 @@ button .fas {
   vertical-align: middle;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  border: none;
+}
+
+.twitter-search-btn {
+  height: 2.5em;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(0,123,255, 1);
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
+
+.twitter-search-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+.twitter-search-field {
+  height: 2.5em;
 }
 
 .my-btn-on {
@@ -536,8 +574,16 @@ button .fas {
 .tech-news {
   padding: 30px;
   max-height: 200px;
-  background-color: rgba(49, 49, 49, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
+}
+
+.twitter-footer {
+  color: rgb(177, 177, 177);
+}
+
+.tweet-body {
+  color: whitesmoke;
 }
 
 .placeholder {
