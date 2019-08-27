@@ -452,10 +452,17 @@ button .fas {
 
 .profile-pic {
   //border-radius: 50%;
-  //padding-top: 10px;
-  //padding-bottom: 10px;
+  padding-top: 1em;
+  padding-right: 3em;
   width: 100%;
-  max-height: 100%;
+  max-height: 90%;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  image-orientation: from-image;
+}
+
+.img-hidden {
+  opacity: 0;
 }
 
 #cf img {
