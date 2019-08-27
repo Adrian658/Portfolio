@@ -1,5 +1,10 @@
 <main role="main" class="inner cover">
   <h1 class="tech-heading">Tech News: Ruby on Rails</h1>
+  <%= form_with do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
   <div class="row">
     <% @tweets.each do |tweet| %>
       <div class="col-md-6">
