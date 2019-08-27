@@ -18,7 +18,7 @@ class PagesController < ApplicationController
       search_term = ("#" + params[:twitter_search]).gsub(/\s+/, "")
       session[:twitter_search_term] = search_term
     rescue
-      search_term = "#neymar"
+      search_term = "#machinelearning"
       session[:twitter_search_term] = search_term
     end
     @tweets = SocialTool.twitter_search(search_term)

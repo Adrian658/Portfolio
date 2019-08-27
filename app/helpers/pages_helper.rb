@@ -22,15 +22,15 @@ module PagesHelper
 
     regex_date = /\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d(?:\.\d+)?Z?/
 
-    #tweet_with_links = tweet.gsub(regex_links) do |url|
-    #  "<a href='#{url}' target='_blank'>#{url}</a>"
-    #end
-
+    #if type == "time"
     tweet_with_date_distance = tweet.gsub(regex_date) do |date|
       distance_of_time(date)
-    end
-
-    tweet_with_date_distance.html_safe
+    end.html_safe
+    #else
+    #  tweet_with_links = tweet.gsub(regex_links) do |url|
+    #    "<a href='#{url}' target='_blank'>#{url}</a>"
+    #  end.html_safe
+    #end
 
   end
 

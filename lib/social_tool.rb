@@ -12,7 +12,7 @@ module SocialTool
     client.search(search_param, result_type: 'recent', lang: 'en').take(6).collect do |tweet|
       "<div class='tweet-header'>
       <img src=#{tweet.user.profile_banner_url} height='40px' width='40px'>
-      <strong class='pl-2'>#{tweet.user.screen_name}</strong>
+      <a href=#{tweet.user.url}><strong class='pl-2'>#{tweet.user.screen_name}</strong></a>
       </div>
       <div class='tweet-body pt-2'>#{tweet.text}</div>
       <div class='twitter-footer pt-2'>#{tweet.created_at.to_s.gsub(/\s+/, "T").gsub("TUTC", "")}</div>".html_safe
