@@ -43,7 +43,7 @@ module ApplicationHelper
       },
       {
         url: tech_news_path,
-        title: 'Tech News'
+        title: 'Twitter News'
       },
       {
         url: blogs_path,
