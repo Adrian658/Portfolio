@@ -73,7 +73,7 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.2'
 gem 'redis', '~> 3.3', '>= 3.3.3'
-gem 'redcarpet', '~> 3.5.0'
+gem 'redcarpet', '~> 3.5.1'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'sprockets', '~>3.7.2'
 
